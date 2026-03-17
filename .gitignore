@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Optional: uncomment if you don't want to track large assets
+# images/*.jpg
+# images/*.jpeg
+# images/*.png
