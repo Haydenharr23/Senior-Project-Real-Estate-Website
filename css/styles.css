@@ -1,6 +1,6 @@
 /* Michael Harris — Real Estate */
 :root {
-  --site-hero-height: 620px;
+  --site-hero-height: 750px;
   /* rem-only horizontal padding so zoom does not rescale padding like vw does */
   --site-hero-padding-x: 1.75rem;
   --dark: #1a1a1a;
