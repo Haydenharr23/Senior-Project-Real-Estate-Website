@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sell With Confidence | Michael Harris | Real Estate</title>
-  <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -17,7 +17,7 @@
         <span class="logo">Michael Harris</span>
         <span class="logo-tagline">Via Group, Realtors</span>
       </div>
-      <ul class="nav-links">
+      <ul id="primary-nav" class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="buy.html">Buy</a></li>
@@ -25,31 +25,41 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="blog.html">Blog</a></li>
       </ul>
-      <a href="contact.html" class="btn-signup">Schedule a Call</a>
+      <div class="nav-end">
+        <button type="button" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+        <a href="contact.html" class="btn-signup" data-contact-modal-open>Send an email</a>
+      </div>
     </nav>
   </header>
 
   <main>
-    <!-- Hero: image left, form right -->
-    <section class="hero-with-form">
-      <div>
+    <section class="hero site-hero hero--sell">
+      <div class="hero-content">
         <h1>Sell With Confidence.</h1>
-        <p style="color: var(--gray); margin-bottom: 1rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor sit amet, consectetur adipiscing elit.</p>
-        <div class="hero-image-left">📷</div>
+        <p>Get a free home value estimate and a clear plan to list your Des Moines Area home with a trusted local expert.</p>
+        <div class="btn-group">
+          <a href="#home-valuation" class="btn btn-arrow">Get your free valuation</a>
+          <a href="contact.html" class="btn-outline" data-contact-modal-open>Send an email</a>
+        </div>
       </div>
+    </section>
+
+    <section id="home-valuation" class="sell-valuation-section">
+      <h2 class="section-title">Home Valuation</h2>
+      <p style="text-align: center; color: var(--gray); margin-bottom: 1.5rem;">Tell us a bit about your property and we will follow up with your estimate.</p>
       <form class="valuation-form" action="#" method="get">
-        <h3>Home Valuation</h3>
+        <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Request your estimate</h3>
         <p style="font-size: 0.875rem; color: var(--gray); margin-bottom: 1rem;">Get your free home value estimate.</p>
         <label for="val-name">Name</label>
-        <input type="text" id="val-name" name="name" placeholder="Bryan Clark">
+        <input type="text" id="val-name" name="name" placeholder="Your name">
         <label for="val-email">Email</label>
-        <input type="email" id="val-email" name="email" placeholder="Email@yourdomain.com">
+        <input type="email" id="val-email" name="email" placeholder="you@example.com">
         <label for="val-phone">Phone</label>
-        <input type="tel" id="val-phone" name="phone" placeholder="123-456-7890">
-        <label for="val-company">Company</label>
-        <input type="text" id="val-company" name="company" placeholder="IBM Norton">
+        <input type="tel" id="val-phone" name="phone" placeholder="(515) 555-0100">
         <label for="val-message">Message</label>
-        <textarea id="val-message" name="message" placeholder="How may I help you..."></textarea>
+        <textarea id="val-message" name="message" placeholder="Property address, timeline, and anything else we should know…"></textarea>
         <button type="submit" class="btn">Get Your Free Home Value</button>
       </form>
     </section>
@@ -57,79 +67,82 @@
     <!-- Selling Process -->
     <section>
       <h2 class="section-title" style="text-align: center;">Selling Process</h2>
-      <p style="text-align: center; color: var(--gray); margin-bottom: 2rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p style="text-align: center; color: var(--gray); margin-bottom: 2rem;">A proven approach to maximize your home's value and minimize stress.</p>
       <div class="process-grid">
         <div class="process-step">
           <div class="step-num">01</div>
           <h3>Consultation</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#" class="learn-more plus">Learn more</a>
+          <p>We meet to discuss your goals, timeline, and current market conditions in your area.</p>
+          <a href="contact.html" class="learn-more plus">Get started</a>
         </div>
         <div class="process-step">
           <div class="step-num">02</div>
           <h3>Pricing Strategy</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#" class="learn-more plus">Learn more</a>
+          <p>We analyze comparable sales to price your home competitively from day one.</p>
+          <a href="contact.html" class="learn-more plus">Get started</a>
         </div>
         <div class="process-step">
           <div class="step-num">03</div>
           <h3>Professional Marketing</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#" class="learn-more plus">Learn more</a>
+          <p>Your home is showcased with professional photography and broad MLS and digital exposure.</p>
+          <a href="contact.html" class="learn-more plus">Get started</a>
         </div>
         <div class="process-step">
           <div class="step-num">04</div>
           <h3>Showings</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#" class="learn-more plus">Learn more</a>
+          <p>We coordinate showings and keep you updated on buyer interest and feedback.</p>
+          <a href="contact.html" class="learn-more plus">Get started</a>
         </div>
         <div class="process-step">
           <div class="step-num">05</div>
           <h3>Negotiation &amp; Close</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#" class="learn-more plus">Learn more</a>
+          <p>We negotiate the best terms on your behalf and guide you smoothly to the closing table.</p>
+          <a href="contact.html" class="learn-more plus">Get started</a>
         </div>
         <div class="process-step">
           <div class="step-num">06</div>
-          <h3>More Info</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#" class="learn-more plus">Learn more</a>
+          <h3>Post-Closing</h3>
+          <p>We're still here after the sale — happy to answer any questions or connect you with resources.</p>
+          <a href="contact.html" class="learn-more plus">Get started</a>
         </div>
       </div>
     </section>
 
     <!-- Marketing / Strategy -->
     <section>
-      <div class="marketing-strategy-inner">
-        <div>
+      <div class="marketing-strategy-inner marketing-strategy-inner--with-photo">
+        <figure class="marketing-strategy-photo">
+          <img src="images/home5.jpg" alt="Bright living space in a Des Moines area listing" width="900" height="1200" loading="lazy">
+        </figure>
+        <div class="marketing-strategy-copy">
           <h2 class="section-title">Marketing / Strategy</h2>
-          <p style="color: var(--gray); margin-bottom: 1rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p style="color: var(--gray); margin-bottom: 1rem;">We combine professional photography, MLS exposure, targeted social media ads, and direct email campaigns to get your home in front of the right buyers fast.</p>
           <div class="btn-group">
-            <a href="#" class="btn">Our Strategy</a>
-            <a href="#" class="btn-outline">Learn more</a>
+            <a href="contact.html" class="btn">Our Strategy</a>
+            <a href="contact.html" class="btn-outline">Learn more</a>
           </div>
-        </div>
         <div class="marketing-cards">
           <div class="marketing-card">
             <div class="icon">🖼</div>
             <h4>Professional Photography</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>High-resolution images and thoughtful staging guidance so your home makes a strong first impression online and in print.</p>
           </div>
           <div class="marketing-card">
             <div class="icon">📋</div>
             <h4>MLS Exposure</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Your listing is positioned for maximum visibility through the MLS and major consumer sites buyers actually use.</p>
           </div>
           <div class="marketing-card">
             <div class="icon">📱</div>
             <h4>Social Media Ads</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Targeted campaigns help reach local and relocating buyers who are actively searching in the Des Moines metro.</p>
           </div>
           <div class="marketing-card">
             <div class="icon">✉</div>
             <h4>Email Marketing</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Announcements to engaged contacts and cooperating agents keep your property top of mind with serious prospects.</p>
           </div>
+        </div>
         </div>
       </div>
     </section>
@@ -141,35 +154,35 @@
         <div class="results-stat-card">
           <div class="num">200+</div>
           <h4>Average Sale Price</h4>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Track record across diverse price points and neighborhoods throughout the Des Moines metro.</p>
         </div>
         <div class="results-stat-card">
           <div class="num">97%</div>
           <h4>Market Price</h4>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Pricing and positioning grounded in current comps so your list reflects what buyers are willing to pay.</p>
         </div>
         <div class="results-stat-card">
           <div class="num">34+</div>
           <h4>Average Days On Market</h4>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Focused marketing, quality showings, and responsive follow-up to keep momentum on serious listings.</p>
         </div>
         <div class="results-stat-card">
           <div class="num">100+</div>
           <h4>Clients</h4>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Repeat business and referrals from sellers who value clear communication and straightforward advice.</p>
         </div>
       </div>
     </section>
 
-    <!-- Schedule A Call With Me -->
+    <!-- Get in touch -->
     <section class="cta-section-left">
       <div class="cta-inner">
         <div>
-          <h2>Schedule A Call With Me.</h2>
-          <p>Ready to sell with confidence? Let's talk. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+          <h2>Get in touch</h2>
+          <p>Ready to sell with confidence? Send a message or use the full contact page.</p>
           <div class="btn-group">
-            <a href="contact.html" class="btn">Schedule A Call</a>
-            <a href="buy.html" class="btn-outline">View Listings</a>
+            <a href="contact.html" class="btn" data-contact-modal-open>Send an email</a>
+            <a href="buy.html" class="btn-outline">Buying</a>
           </div>
         </div>
         <div></div>
@@ -179,7 +192,7 @@
 
   <footer>
     <div class="footer-inner">
-      <div class="footer-left">
+      <div class="footer-brand">
         <div class="logo">Michael Harris</div>
         <div class="logo-tagline">Via Group, Realtors</div>
         <div class="footer-logos">
@@ -187,7 +200,7 @@
           <img src="images/NARlogo2.jpg" alt="National Association of Realtors" class="footer-logo" loading="lazy">
         </div>
       </div>
-      <div class="footer-right">
+      <nav class="footer-mid" aria-label="Footer">
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -196,16 +209,33 @@
           <li><a href="contact.html">Contact</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
-        <div class="footer-social">
+        <div class="footer-social" aria-label="Social profiles">
           <a href="https://www.facebook.com/MichaelHarrisHomes" target="_blank" rel="noopener" aria-label="Facebook">f</a>
           <a href="https://www.realtor.com/realestateagents/56b3495d89a68901006cc687" target="_blank" rel="noopener" aria-label="Realtor.com Profile">R</a>
           <a href="https://www.zillow.com/profile/michael%20harris3" target="_blank" rel="noopener" aria-label="Zillow Profile">Z</a>
           <a href="https://www.homes.com/real-estate-agents/michael-harris/2wdrwqc/" target="_blank" rel="noopener" aria-label="Homes.com Profile">H</a>
         </div>
-        <p class="company-info">Copyright © 2026. All rights reserved.<br>Michael Harris. Via Group, Realtors – Broker.<br>1200 Valley West Dr, West Des Moines, IA 50266. (515) 707-4982</p>
+      </nav>
+      <div class="footer-newsletter" aria-labelledby="footer-newsletter-heading">
+        <p id="footer-newsletter-heading" class="footer-newsletter__title">Newsletter</p>
+        <p class="footer-newsletter__hint">Market updates &amp; tips by email</p>
+        <form class="footer-newsletter-form" action="https://formspree.io/f/xqegdjvw" method="POST">
+          <p data-fs-error="" class="footer-newsletter__fs-msg" role="alert"></p>
+          <p data-fs-success class="footer-newsletter__fs-msg" role="status" tabindex="-1"></p>
+          <div class="footer-newsletter__row">
+            <input type="email" name="email" required placeholder="Your email" autocomplete="email" aria-label="Email" data-fs-field>
+            <button type="submit" class="btn footer-newsletter__btn" data-fs-submit-btn>Subscribe</button>
+          </div>
+          <span class="footer-newsletter__field-error" data-fs-error="email" role="alert"></span>
+        </form>
+      </div>
+      <div class="footer-bottom">
+        <p class="company-info">Copyright © 2026. All rights reserved.<br>Michael Harris. Via Group, Realtors – Broker.<br>2700 Westown Parkway, Suite 200, West Des Moines, IA 50266. <a href="tel:+15157074982">(515) 707-4982</a></p>
       </div>
     </div>
   </footer>
 
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>

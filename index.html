@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Michael Harris | Real Estate</title>
-  <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -17,7 +17,7 @@
         <span class="logo">Michael Harris</span>
         <span class="logo-tagline">Via Group, Realtors</span>
       </div>
-      <ul class="nav-links">
+      <ul id="primary-nav" class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="buy.html">Buy</a></li>
@@ -25,42 +25,34 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="blog.html">Blog</a></li>
       </ul>
-      <a href="contact.html" class="btn-signup">Schedule A Call</a>
+      <div class="nav-end">
+        <button type="button" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+        <a href="contact.html" class="btn-signup" data-contact-modal-open>Send an email</a>
+      </div>
     </nav>
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero">
+    <!-- Hero (same structure + hero-lock as About / Buy / Sell) -->
+    <section class="hero site-hero hero--home">
       <div class="hero-content">
-        <h1>Find Your Perfect Home With a Trusted Partner</h1>
-        <p>Work with Michael Harris—a Des Moines Area realtor with 22 years of experience—for a smooth, stress-free journey to buying or selling. Get expert guidance, honest communication, and results that put you first.</p>
+        <h1>Find Your Perfect Home</h1>
+        <p>Trusted Des Moines Area guidance for buying and selling—strategic, personable, and focused on your goals.</p>
         <div class="btn-group">
-          <a href="contact.html" class="btn btn-arrow">Schedule A Call</a>
-          <a href="buy.html" class="btn-outline">View Listings</a>
+          <a href="contact.html" class="btn btn-arrow" data-contact-modal-open>Send an email</a>
+          <a href="buy.html" class="btn-outline">Buying</a>
         </div>
       </div>
-      <div class="hero-image" id="hero-headshot-wrap">
-        <img src="images/headshot.jpeg" alt="Michael Harris" class="hero-headshot" id="hero-headshot-img" onerror="window.tryHeadshotExts&&window.tryHeadshotExts(this);">
-        <div class="hero-headshot-placeholder" id="hero-headshot-placeholder" style="display: none;">Your photo here</div>
-      </div>
-    </section>
-
-    <!-- Trending Listings -->
-    <section>
-      <div class="trending-divider">
-        <span>Trending Listings</span>
-      </div>
-      <div class="listings-grid" data-listings data-limit="4">
-        <!-- Listings loaded from data/listings.json by js/listings.js -->
-      </div>
-      <a href="buy.html" class="btn">View All Listings</a>
     </section>
 
     <!-- About Section -->
     <section>
-      <div class="about-section-inner">
-        <div class="video-placeholder">▶</div>
+      <div class="about-section-inner about-section-inner--home">
+        <div class="about-headshot-wrap">
+          <img class="about-headshot-img" src="images/headshot.jpg" alt="Michael Harris" width="400" height="533" loading="lazy" onerror="this.onerror=null;this.src='images/headshot.jpeg';">
+        </div>
         <div>
           <h2 class="section-title">About Michael Harris</h2>
           <p>Michael is an accomplished Des Moines Area agent who brings a strategic yet personable approach to the home buying and selling process. He has built a reputation for his refreshingly friendly customer care and proven ability to guide buyers to the best value for their dream home, and to help sellers achieve a smooth, stress-free sale.</p>
@@ -70,57 +62,115 @@
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials-section">
-      <h2 class="section-title" style="text-align: center;">Testimonials</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p class="testimonial-quote">Mike is great to work with! I have used him multiple times now to both buy and sell, every time was a great experience. Highly recommend!</p>
-          <p class="testimonial-author">— Steven Oldfather</p>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">Michael was amazing, he appeared as our representative more times that I can count when we couldn't be there!</p>
-          <p class="testimonial-author">— Brooke Edmiston</p>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">I enjoyed working with Mike Harris. He was straight forward and always kept me up to speed with appointments and necessary updates. Thank you VIA</p>
-          <p class="testimonial-author">— Concetta Morales</p>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">Over the years, I have worked with 4 different agents and Michael is the best, by far, out of any that I've dealt with. He's professional, personable, and is always willing to be available. I can't say enough great things about working with Michael! Michael made the whole process 100% painless, it was a fun experience and not stressful! Thank you, Mike!!</p>
-          <p class="testimonial-author">— Jolie, Urbandale</p>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">Mike did a great job for us! His customer service is phenomenal. He goes above and beyond to ensure his customers are taken care of and understand the process. We had a great experience and will utilize his services in the future...wherever he works or whomever he works for.</p>
-          <p class="testimonial-author">— Mike Nagl, Waukee</p>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">Mike has helped us purchase two homes and sell one. We wouldn't work with anyone else!</p>
-          <p class="testimonial-author">— Larry Dempsey, Des Moines, IA</p>
-        </div>
-      </div>
-      <a href="contact.html" class="btn">Schedule A Call</a>
+    <!-- Local homes gallery -->
+    <section class="section-home-mosaic" aria-labelledby="mosaic-heading">
+      <h2 id="mosaic-heading" class="section-title section-title--center">Homes across the Des Moines metro</h2>
+      <p class="section-intro section-intro--narrow section-intro--mb-sm">A sample of the styles and neighborhoods buyers explore when they work with a local expert.</p>
+      <ul class="photo-mosaic-grid">
+        <li>
+          <figure>
+            <img src="images/home1.jpg" alt="Traditional two-story home with front yard" width="800" height="600" loading="lazy">
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="images/home2.jpg" alt="Residential home with attached garage and landscaping" width="800" height="600" loading="lazy">
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="images/home3.jpg" alt="Suburban home exterior with driveway" width="800" height="600" loading="lazy">
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="images/home4.jpg" alt="Modern style home with clean curb appeal" width="800" height="600" loading="lazy">
+          </figure>
+        </li>
+      </ul>
     </section>
 
-    <!-- Schedule A Call With Me -->
-    <section class="cta-section-left">
+    <!-- Affiliations -->
+    <section class="section-band-affiliations" aria-labelledby="affiliations-heading">
+      <h2 id="affiliations-heading" class="section-title section-title--center">Affiliations</h2>
+      <p class="section-intro section-intro--narrow section-intro--mb-sm">Brokered by Via Group, Realtors · Member, National Association of Realtors®</p>
+      <div class="affiliations-logos">
+        <img src="images/Vialogo1.jfif" alt="Via Group, Realtors" loading="lazy">
+        <img src="images/NARlogo2.jpg" alt="National Association of Realtors" loading="lazy">
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section" aria-labelledby="testimonials-heading">
+      <h2 id="testimonials-heading" class="section-title section-title--center">Testimonials</h2>
+      <p class="testimonials-section__lead">What clients say about working together in the Des Moines area.</p>
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <div class="testimonial-card__accent" aria-hidden="true"></div>
+          <p class="testimonial-card__stars" aria-hidden="true">★★★★★</p>
+          <p class="testimonial-quote">Mike is great to work with! I have used him multiple times now to both buy and sell, every time was a great experience. Highly recommend!</p>
+          <cite class="testimonial-author">— Steven Oldfather</cite>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-card__accent" aria-hidden="true"></div>
+          <p class="testimonial-card__stars" aria-hidden="true">★★★★★</p>
+          <p class="testimonial-quote">Michael was amazing, he appeared as our representative more times that I can count when we couldn't be there!</p>
+          <cite class="testimonial-author">— Brooke Edmiston</cite>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-card__accent" aria-hidden="true"></div>
+          <p class="testimonial-card__stars" aria-hidden="true">★★★★★</p>
+          <p class="testimonial-quote">I enjoyed working with Mike Harris. He was straight forward and always kept me up to speed with appointments and necessary updates. Thank you VIA</p>
+          <cite class="testimonial-author">— Concetta Morales</cite>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-card__accent" aria-hidden="true"></div>
+          <p class="testimonial-card__stars" aria-hidden="true">★★★★★</p>
+          <p class="testimonial-quote">Over the years, I have worked with 4 different agents and Michael is the best, by far, out of any that I've dealt with. He's professional, personable, and is always willing to be available. I can't say enough great things about working with Michael! Michael made the whole process 100% painless, it was a fun experience and not stressful! Thank you, Mike!!</p>
+          <cite class="testimonial-author">— Jolie, Urbandale</cite>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-card__accent" aria-hidden="true"></div>
+          <p class="testimonial-card__stars" aria-hidden="true">★★★★★</p>
+          <p class="testimonial-quote">Mike did a great job for us! His customer service is phenomenal. He goes above and beyond to ensure his customers are taken care of and understand the process. We had a great experience and will utilize his services in the future...wherever he works or whomever he works for.</p>
+          <cite class="testimonial-author">— Mike Nagl, Waukee</cite>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-card__accent" aria-hidden="true"></div>
+          <p class="testimonial-card__stars" aria-hidden="true">★★★★★</p>
+          <p class="testimonial-quote">Mike has helped us purchase two homes and sell one. We wouldn't work with anyone else!</p>
+          <cite class="testimonial-author">— Larry Dempsey, Des Moines, IA</cite>
+        </article>
+      </div>
+      <div class="testimonials-section__cta">
+        <a href="contact.html" class="btn" data-contact-modal-open>Send an email</a>
+      </div>
+    </section>
+
+    <div class="home-house-accent" aria-hidden="true">
+      <svg class="home-house-accent__svg" viewBox="0 0 120 104" width="140" height="122" focusable="false">
+        <polygon class="home-house-accent__roof" points="60,6 112,44 8,44" />
+        <rect class="home-house-accent__body" x="16" y="44" width="88" height="56" rx="2" />
+        <rect class="home-house-accent__chimney" x="80" y="22" width="12" height="26" rx="1" />
+        <rect class="home-house-accent__door" x="50" y="66" width="20" height="34" rx="1" />
+        <rect class="home-house-accent__window home-house-accent__window--l" x="26" y="54" width="20" height="16" rx="1" />
+        <rect class="home-house-accent__window home-house-accent__window--r" x="74" y="54" width="20" height="16" rx="1" />
+      </svg>
+    </div>
+
+    <!-- Get in touch -->
+    <section class="cta-section-left" aria-labelledby="home-cta-heading">
       <div class="cta-inner">
-        <div>
-          <h2>Schedule A Call With Me</h2>
-          <p>Ready to find your perfect home or sell with confidence? Let's talk.</p>
-          <div class="btn-group">
-            <a href="contact.html" class="btn btn-arrow">Schedule A Call</a>
-            <a href="buy.html" class="btn-outline">View Listings</a>
-          </div>
-        </div>
-        <div></div>
+        <h2 id="home-cta-heading">Get in touch</h2>
+        <p>Ready to find your perfect home or sell with confidence? Send a message or visit the full contact page.</p>
+        <a href="contact.html" class="btn btn-arrow" data-contact-modal-open>Send an email</a>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="footer-inner">
-      <div class="footer-left">
+      <div class="footer-brand">
         <div class="logo">Michael Harris</div>
         <div class="logo-tagline">Via Group, Realtors</div>
         <div class="footer-logos">
@@ -128,7 +178,7 @@
           <img src="images/NARlogo2.jpg" alt="National Association of Realtors" class="footer-logo" loading="lazy">
         </div>
       </div>
-      <div class="footer-right">
+      <nav class="footer-mid" aria-label="Footer">
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -137,18 +187,33 @@
           <li><a href="contact.html">Contact</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
-        <div class="footer-social">
+        <div class="footer-social" aria-label="Social profiles">
           <a href="https://www.facebook.com/MichaelHarrisHomes" target="_blank" rel="noopener" aria-label="Facebook">f</a>
           <a href="https://www.realtor.com/realestateagents/56b3495d89a68901006cc687" target="_blank" rel="noopener" aria-label="Realtor.com Profile">R</a>
           <a href="https://www.zillow.com/profile/michael%20harris3" target="_blank" rel="noopener" aria-label="Zillow Profile">Z</a>
           <a href="https://www.homes.com/real-estate-agents/michael-harris/2wdrwqc/" target="_blank" rel="noopener" aria-label="Homes.com Profile">H</a>
         </div>
-        <p class="company-info">Copyright © 2026. All rights reserved.<br>Michael Harris. Via Group, Realtors – Broker.<br>1200 Valley West Dr, West Des Moines, IA 50266. (515) 707-4982</p>
+      </nav>
+      <div class="footer-newsletter" aria-labelledby="footer-newsletter-heading">
+        <p id="footer-newsletter-heading" class="footer-newsletter__title">Newsletter</p>
+        <p class="footer-newsletter__hint">Market updates &amp; tips by email</p>
+        <form class="footer-newsletter-form" action="https://formspree.io/f/xqegdjvw" method="POST">
+          <p data-fs-error="" class="footer-newsletter__fs-msg" role="alert"></p>
+          <p data-fs-success class="footer-newsletter__fs-msg" role="status" tabindex="-1"></p>
+          <div class="footer-newsletter__row">
+            <input type="email" name="email" required placeholder="Your email" autocomplete="email" aria-label="Email" data-fs-field>
+            <button type="submit" class="btn footer-newsletter__btn" data-fs-submit-btn>Subscribe</button>
+          </div>
+          <span class="footer-newsletter__field-error" data-fs-error="email" role="alert"></span>
+        </form>
+      </div>
+      <div class="footer-bottom">
+        <p class="company-info">Copyright © 2026. All rights reserved.<br>Michael Harris. Via Group, Realtors – Broker.<br>2700 Westown Parkway, Suite 200, West Des Moines, IA 50266. <a href="tel:+15157074982">(515) 707-4982</a></p>
       </div>
     </div>
   </footer>
 
-  <script src="js/listings.js"></script>
- 
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>

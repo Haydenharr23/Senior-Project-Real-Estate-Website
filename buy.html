@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Find Your Perfect Home | Michael Harris | Real Estate</title>
-  <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -17,7 +17,7 @@
         <span class="logo">Michael Harris</span>
         <span class="logo-tagline">Via Group, Realtors</span>
       </div>
-      <ul class="nav-links">
+      <ul id="primary-nav" class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="buy.html">Buy</a></li>
@@ -25,168 +25,152 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="blog.html">Blog</a></li>
       </ul>
-      <a href="contact.html" class="btn-signup">Schedule A Call</a>
+      <div class="nav-end">
+        <button type="button" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+        <a href="contact.html" class="btn-signup" data-contact-modal-open>Send an email</a>
+      </div>
     </nav>
   </header>
 
   <main>
-    <!-- Buying Process -->
-    <section>
-      <h2 class="section-title" style="text-align: center;">Buying Process</h2>
-      <p style="text-align: center; color: var(--gray); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <div class="process-grid">
-        <div class="process-step">
-          <div class="step-num">01</div>
-          <h3>Introduction</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-          <a href="#" class="learn-more">Learn more</a>
-        </div>
-        <div class="process-step">
-          <div class="step-num">02</div>
-          <h3>Pre-Approval</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-          <a href="#" class="learn-more">Learn more</a>
-        </div>
-        <div class="process-step">
-          <div class="step-num">03</div>
-          <h3>Home Search</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-          <a href="#" class="learn-more">Learn more</a>
-        </div>
-        <div class="process-step">
-          <div class="step-num">04</div>
-          <h3>Offer &amp; Negotiation</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-          <a href="#" class="learn-more">Learn more</a>
-        </div>
-        <div class="process-step">
-          <div class="step-num">05</div>
-          <h3>Closing</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-          <a href="#" class="learn-more">Learn more</a>
-        </div>
-        <div class="process-step">
-          <div class="step-num">06</div>
-          <h3>More Info</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-          <a href="#" class="learn-more">Learn more</a>
+    <section class="hero site-hero hero--buy" aria-label="Buying with Michael Harris">
+      <div class="hero-content">
+        <h1>Find Your Perfect Home</h1>
+        <p>Explore the buying process below, then reach out when you are ready to tour or make an offer in the Des Moines Area.</p>
+        <div class="btn-group">
+          <a href="contact.html" class="btn btn-arrow" data-contact-modal-open>Send an email</a>
+          <a href="#buying-process" class="btn-outline">See the process</a>
         </div>
       </div>
     </section>
 
-    <!-- Local Data Insight / Marketing Expertise -->
+    <!-- Buying Process -->
+    <section id="buying-process">
+      <h2 class="section-title section-title--center">Buying Process</h2>
+      <p class="section-intro section-intro--narrow">From pre-approval to closing, here's what to expect when you work with Michael.</p>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <h3>Introduction</h3>
+          <p>We start with a consultation to learn about your needs, budget, and ideal timeline.</p>
+          <a href="contact.html" class="learn-more">Get started</a>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <h3>Pre-Approval</h3>
+          <p>Connect with a trusted lender to get pre-approved and know exactly what you can afford.</p>
+          <a href="contact.html" class="learn-more">Get started</a>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <h3>Home Search</h3>
+          <p>We tour homes that match your criteria across the Des Moines metro.</p>
+          <a href="contact.html" class="learn-more">Get started</a>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <h3>Offer &amp; Negotiation</h3>
+          <p>We craft a competitive offer and negotiate on your behalf to get you the best deal.</p>
+          <a href="contact.html" class="learn-more">Get started</a>
+        </div>
+        <div class="process-step">
+          <div class="step-num">05</div>
+          <h3>Closing</h3>
+          <p>We guide you through inspections, final financing, and the closing table.</p>
+          <a href="contact.html" class="learn-more">Get started</a>
+        </div>
+        <div class="process-step">
+          <div class="step-num">06</div>
+          <h3>Move In</h3>
+          <p>Congratulations — the keys are yours! We're still here if you have questions after closing.</p>
+          <a href="contact.html" class="learn-more">Get started</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
     <section>
-      <p class="section-label" style="text-align: center;">Local Data Insight – Neighborhood Knowledge</p>
-      <h2 class="section-title" style="text-align: center;">Marketing Expertise</h2>
-      <div class="expertise-inner">
-        <div class="graph-placeholder">Line graph</div>
-        <div class="data-stats-grid">
+      <h2 class="section-title section-title--center">Experience That Gets Results</h2>
+      <div class="data-stats-grid" style="max-width:600px; margin:0 auto;">
           <div class="data-stat-card">
             <div class="num">250+</div>
             <p>Happy Customers</p>
           </div>
           <div class="data-stat-card">
             <div class="num">400+</div>
-            <p>Sold offers</p>
+            <p>Sold Offers</p>
           </div>
           <div class="data-stat-card">
             <div class="num">1.8K+</div>
-            <p>Listings closed</p>
+            <p>Listings Closed</p>
           </div>
           <div class="data-stat-card">
             <div class="num">110+</div>
-            <p>Five-star reviews</p>
+            <p>Five-Star Reviews</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Listings -->
-    <section>
-      <div class="trending-divider">
-        <span>Featured Listings</span>
-      </div>
-      <div class="listings-grid" data-listings data-featured="true">
-        <!-- Listings loaded from data/listings.json by js/listings.js -->
-      </div>
-    </section>
-
-    <!-- IDX / MLS Listings Search – paste your IDX provider's embed code inside the div below -->
-    <section class="idx-section">
-      <div class="trending-divider">
-        <span>Search MLS Listings</span>
-      </div>
-      <p class="idx-intro">Search all available properties. Get an IDX feed from your MLS/board via a provider (e.g. IDX Broker, RealtyNinja) and paste the embed code below.</p>
-      <div class="idx-embed" id="idx-embed">
-        <div class="idx-placeholder">
-          <p><strong>IDX placeholder</strong></p>
-          <p>To show live MLS listings:</p>
-          <ol>
-            <li>Sign up with an IDX provider (e.g. <a href="https://idxbroker.com" target="_blank" rel="noopener">IDX Broker</a>, <a href="https://www.realtyninja.com/mls-idx-widget" target="_blank" rel="noopener">RealtyNinja</a>, or your board’s recommended vendor).</li>
-            <li>Get your search/results embed code from their dashboard.</li>
-            <li>Paste that code inside this <code>div.idx-embed</code> in <code>buy.html</code> (replace this placeholder block).</li>
-          </ol>
-          <p>See <code>docs/IDX-SETUP.md</code> in this project for details.</p>
-        </div>
       </div>
     </section>
 
     <!-- Buyers Resources -->
-    <section>
-      <h2 class="section-title" style="text-align: center;">Buyers Resources</h2>
-      <p style="text-align: center; color: var(--gray); margin-bottom: 2rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <section id="buyers-resources">
+      <h2 class="section-title section-title--center">Buyers Resources</h2>
+      <p class="section-intro">Tools and connections to help you buy with confidence.</p>
       <div class="buyers-resources-inner">
         <div>
           <div class="buyers-resource-item">
             <div class="icon">🏠</div>
             <div>
-              <h4>Mortgage Calculator</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h4>Mortgage calculator</h4>
+              <p>Estimate principal and interest, plus optional tax and insurance, in a pop-up—helpful for budgeting, not a lender quote.</p>
+              <button type="button" class="btn btn-outline buyers-resource-item__btn" data-mortgage-modal-open>Open calculator</button>
             </div>
           </div>
           <div class="buyers-resource-item">
             <div class="icon">📁</div>
             <div>
               <h4>Trusted Lenders</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p>Get connected with vetted local lenders offering competitive rates and fast closings.</p>
             </div>
           </div>
         </div>
-        <div class="buyers-resources-center">
-          <div class="buyers-resources-center-image img-placeholder"></div>
-          <div class="btn-group" style="margin-top: 1rem;">
-            <a href="#" class="btn">Apply Now</a>
-            <a href="#" class="btn-outline">Learn More</a>
+        <div class="buyers-resources-center buyers-resources-center--visual" id="mortgage-calculator-anchor">
+          <div class="buyers-resources-visual">
+            <img class="buyers-resources-visual__img" src="images/home2.jpg" alt="Des Moines area home with landscaping" width="900" height="1500" loading="lazy">
+            <div class="buyers-resources-visual__overlay" aria-hidden="true"></div>
+            <div class="buyers-resources-visual__cta-wrap">
+              <button type="button" class="btn btn-arrow" data-contact-modal-open>Send a message</button>
+            </div>
           </div>
         </div>
         <div>
           <div class="buyers-resource-item">
             <div class="icon">📄</div>
             <div>
-              <h4>Home Buyer Download</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h4>Home Buyer Guide</h4>
+              <p>A step-by-step overview of the buying process from pre-approval through move-in day.</p>
             </div>
           </div>
           <div class="buyers-resource-item">
             <div class="icon">🔍</div>
             <div>
               <h4>Inspections</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p>We work with trusted local inspectors to protect your investment before you close.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Schedule A Call With Me -->
+    <!-- Get in touch -->
     <section class="cta-section-left">
       <div class="cta-inner">
         <div>
-          <h2>Schedule A Call With Me.</h2>
-          <p>Mauris at magna eget nulla dictum volutpat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h2>Questions about buying?</h2>
+          <p>Send a message or use the full contact page—Michael will get back to you.</p>
           <div class="btn-group">
-            <a href="contact.html" class="btn">Schedule A Call</a>
-            <a href="buy.html" class="btn-outline">View Listings</a>
+            <a href="contact.html" class="btn" data-contact-modal-open>Send an email</a>
           </div>
         </div>
         <div></div>
@@ -194,9 +178,66 @@
     </section>
   </main>
 
+  <dialog class="mortgage-modal" id="mortgage-calculator-dialog" aria-labelledby="mc-dialog-title">
+    <div class="mortgage-modal__panel">
+      <div class="mortgage-modal__top">
+        <h3 id="mc-dialog-title" class="mortgage-modal__title">Estimate your payment</h3>
+        <button type="button" class="mortgage-modal__close" aria-label="Close calculator">&times;</button>
+      </div>
+      <div class="mortgage-calculator">
+        <div class="mortgage-calculator__form" role="group" aria-labelledby="mc-form-label">
+          <span id="mc-form-label" class="visually-hidden">Loan details</span>
+          <div class="mortgage-calculator__field">
+            <label for="mc-price">Home price</label>
+            <input type="number" id="mc-price" min="0" step="1000" value="350000" inputmode="decimal" />
+          </div>
+          <div class="mortgage-calculator__field">
+            <label for="mc-down-percent">Down payment (%)</label>
+            <input type="number" id="mc-down-percent" min="0" max="100" step="0.5" value="10" inputmode="decimal" />
+          </div>
+          <div class="mortgage-calculator__field">
+            <label for="mc-rate">Interest rate (% APR)</label>
+            <input type="number" id="mc-rate" min="0" max="25" step="0.125" value="6.5" inputmode="decimal" />
+          </div>
+          <div class="mortgage-calculator__field">
+            <label for="mc-term">Loan term</label>
+            <select id="mc-term">
+              <option value="30" selected>30 years</option>
+              <option value="20">20 years</option>
+              <option value="15">15 years</option>
+            </select>
+          </div>
+          <div class="mortgage-calculator__field mortgage-calculator__field--full">
+            <label for="mc-tax-annual">Annual property tax <span class="mortgage-calculator__optional">(optional)</span></label>
+            <input type="number" id="mc-tax-annual" min="0" step="100" placeholder="e.g. 4200" inputmode="decimal" />
+          </div>
+          <div class="mortgage-calculator__field mortgage-calculator__field--full">
+            <label for="mc-insurance-annual">Annual homeowners insurance <span class="mortgage-calculator__optional">(optional)</span></label>
+            <input type="number" id="mc-insurance-annual" min="0" step="50" placeholder="e.g. 1400" inputmode="decimal" />
+          </div>
+        </div>
+        <div class="mortgage-calculator__results" aria-live="polite">
+          <p class="mortgage-calculator__loan-line">Loan amount <strong id="mc-loan-amount">$0</strong></p>
+          <p class="mortgage-calculator__main-payment">
+            <span class="mortgage-calculator__main-label">Principal &amp; interest</span>
+            <span class="mortgage-calculator__main-value" id="mc-payment-pi">$0.00</span>
+            <span class="mortgage-calculator__main-unit">/mo</span>
+          </p>
+          <p class="mortgage-calculator__sub-line" id="mc-escrow-row" hidden>
+            Est. tax &amp; insurance <span id="mc-payment-escrow">$0.00</span>/mo
+          </p>
+          <p class="mortgage-calculator__total-line" id="mc-total-row" hidden>
+            Estimated total <strong id="mc-payment-total">$0.00</strong>/mo
+          </p>
+        </div>
+        <p class="mortgage-calculator__note">For planning only. Actual payment depends on your lender, credit, taxes, insurance, PMI, and HOA. Not a commitment to lend.</p>
+      </div>
+    </div>
+  </dialog>
+
   <footer>
     <div class="footer-inner">
-      <div class="footer-left">
+      <div class="footer-brand">
         <div class="logo">Michael Harris</div>
         <div class="logo-tagline">Via Group, Realtors</div>
         <div class="footer-logos">
@@ -204,7 +245,7 @@
           <img src="images/NARlogo2.jpg" alt="National Association of Realtors" class="footer-logo" loading="lazy">
         </div>
       </div>
-      <div class="footer-right">
+      <nav class="footer-mid" aria-label="Footer">
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -213,17 +254,33 @@
           <li><a href="contact.html">Contact</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
-        <div class="footer-social">
+        <div class="footer-social" aria-label="Social profiles">
           <a href="https://www.facebook.com/MichaelHarrisHomes" target="_blank" rel="noopener" aria-label="Facebook">f</a>
           <a href="https://www.realtor.com/realestateagents/56b3495d89a68901006cc687" target="_blank" rel="noopener" aria-label="Realtor.com Profile">R</a>
           <a href="https://www.zillow.com/profile/michael%20harris3" target="_blank" rel="noopener" aria-label="Zillow Profile">Z</a>
           <a href="https://www.homes.com/real-estate-agents/michael-harris/2wdrwqc/" target="_blank" rel="noopener" aria-label="Homes.com Profile">H</a>
         </div>
-        <p class="company-info">Copyright © 2026. All rights reserved.<br>Michael Harris. Via Group, Realtors – Broker.<br>1200 Valley West Dr, West Des Moines, IA 50266. (515) 707-4982</p>
+      </nav>
+      <div class="footer-newsletter" aria-labelledby="footer-newsletter-heading">
+        <p id="footer-newsletter-heading" class="footer-newsletter__title">Newsletter</p>
+        <p class="footer-newsletter__hint">Market updates &amp; tips by email</p>
+        <form class="footer-newsletter-form" action="https://formspree.io/f/xqegdjvw" method="POST">
+          <p data-fs-error="" class="footer-newsletter__fs-msg" role="alert"></p>
+          <p data-fs-success class="footer-newsletter__fs-msg" role="status" tabindex="-1"></p>
+          <div class="footer-newsletter__row">
+            <input type="email" name="email" required placeholder="Your email" autocomplete="email" aria-label="Email" data-fs-field>
+            <button type="submit" class="btn footer-newsletter__btn" data-fs-submit-btn>Subscribe</button>
+          </div>
+          <span class="footer-newsletter__field-error" data-fs-error="email" role="alert"></span>
+        </form>
+      </div>
+      <div class="footer-bottom">
+        <p class="company-info">Copyright © 2026. All rights reserved.<br>Michael Harris. Via Group, Realtors – Broker.<br>2700 Westown Parkway, Suite 200, West Des Moines, IA 50266. <a href="tel:+15157074982">(515) 707-4982</a></p>
       </div>
     </div>
   </footer>
 
-  <script src="js/listings.js"></script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>

@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get In Touch | Michael Harris | Real Estate</title>
-  <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -17,7 +17,7 @@
         <span class="logo">Michael Harris</span>
         <span class="logo-tagline">Via Group, Realtors</span>
       </div>
-      <ul class="nav-links">
+      <ul id="primary-nav" class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="buy.html">Buy</a></li>
@@ -25,60 +25,133 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="blog.html">Blog</a></li>
       </ul>
-      <a href="contact.html" class="btn-signup">Request a Call</a>
+      <div class="nav-end">
+        <button type="button" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+        <a href="contact.html" class="btn-signup" data-contact-modal-open>Send an email</a>
+      </div>
     </nav>
   </header>
 
   <main>
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero site-hero hero--contact">
       <div class="hero-content">
         <h1>Get In Touch.</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. We'd love to hear from you.</p>
+        <p>Call, email, or send a message—Michael is here to help with buying, selling, or any real estate questions.</p>
         <div class="btn-group">
-          <a href="#contact-form" class="btn btn-arrow">Schedule A Call</a>
-          <a href="buy.html" class="btn-outline">View Listings</a>
-        </div>
-      </div>
-      <div class="hero-image">📷</div>
-    </section>
-
-    <!-- Get In Touch - Form + Contact Info -->
-    <section id="contact-form">
-      <h2 class="section-title">Get In Touch.</h2>
-      <div class="contact-inner">
-        <form class="contact-form" action="#" method="post">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone">
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-          <button type="submit" class="btn">Submit</button>
-        </form>
-        <div class="contact-info">
-          <p><strong>Michael Harris</strong><br>Via Group, Realtors – Broker</p>
-          <p><strong>Mobile</strong><br> <a href="tel:+15157074982">(515) 707-4982</a></p>
-          <p><strong>Office</strong><br> <a href="tel:+15157074982">(515) 707-4982</a></p>
-          <p><strong>Address</strong><br> 1200 Valley West Dr<br>West Des Moines, IA 50266</p>
-          <p><strong>Connect</strong><br> <a href="https://www.facebook.com/MichaelHarrisHomes" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.realtor.com/realestateagents/56b3495d89a68901006cc687" target="_blank" rel="noopener">Realtor.com</a> · <a href="https://www.zillow.com/profile/michael%20harris3" target="_blank" rel="noopener">Zillow</a> · <a href="https://www.homes.com/real-estate-agents/michael-harris/2wdrwqc/" target="_blank" rel="noopener">Homes.com</a></p>
+          <a href="#contact-form" class="btn btn-arrow">Fill out the form</a>
+          <a href="buy.html" class="btn-outline">Buying</a>
         </div>
       </div>
     </section>
 
-    <!-- Schedule A Call CTA -->
+    <!-- Get In Touch -->
+    <section class="contact-section" id="contact-form" aria-labelledby="contact-section-heading">
+      <div class="contact-section__wrap">
+        <header class="contact-section__header">
+          <h2 id="contact-section-heading" class="contact-section__title">Get In Touch</h2>
+          <p class="contact-section__intro">Whether you are buying, selling, or exploring the Des Moines Area market, send a note and Michael will get back to you.</p>
+        </header>
+
+        <ul class="contact-quick-facts">
+          <li class="contact-quick-facts__item">
+            <span class="contact-quick-facts__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </span>
+            <div class="contact-quick-facts__body">
+              <span class="contact-quick-facts__label">Email</span>
+              <a class="contact-quick-facts__value" href="mailto:michaelharris@viarealtors.com">michaelharris@viarealtors.com</a>
+            </div>
+          </li>
+          <li class="contact-quick-facts__item">
+            <span class="contact-quick-facts__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <div class="contact-quick-facts__body">
+              <span class="contact-quick-facts__label">Phone</span>
+              <a class="contact-quick-facts__value" href="tel:+15157074982">(515) 707-4982</a>
+            </div>
+          </li>
+          <li class="contact-quick-facts__item">
+            <span class="contact-quick-facts__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div class="contact-quick-facts__body">
+              <span class="contact-quick-facts__label">Location</span>
+              <span class="contact-quick-facts__value contact-quick-facts__value--multiline">2700 Westown Parkway, Suite 200<br>West Des Moines, IA 50266</span>
+            </div>
+          </li>
+          <li class="contact-quick-facts__item">
+            <span class="contact-quick-facts__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </span>
+            <div class="contact-quick-facts__body">
+              <span class="contact-quick-facts__label">Office hours</span>
+              <span class="contact-quick-facts__value">Monday – Friday, 9:00 am – 5:00 pm</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="contact-section__card">
+          <form id="contact-page-form" class="contact-form contact-form--page" action="https://formspree.io/f/xqegdjvw" method="POST">
+            <p data-fs-error="" class="contact-form__fs-msg form-feedback" role="alert"></p>
+            <p data-fs-success class="contact-form__fs-msg form-feedback" role="status" tabindex="-1"></p>
+            <div class="contact-form__grid">
+              <div class="contact-form__field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name" data-fs-field>
+                <span class="contact-form__field-error" data-fs-error="name" role="alert"></span>
+              </div>
+              <div class="contact-form__field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" data-fs-field>
+                <span class="contact-form__field-error" data-fs-error="email" role="alert"></span>
+              </div>
+              <div class="contact-form__field">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(515) 555-0100" data-fs-field>
+                <span class="contact-form__field-error" data-fs-error="phone" role="alert"></span>
+              </div>
+              <div class="contact-form__field">
+                <label for="company">Company <span class="contact-form__optional">(optional)</span></label>
+                <input type="text" id="company" name="company" autocomplete="organization" placeholder="Company or team" data-fs-field>
+                <span class="contact-form__field-error" data-fs-error="company" role="alert"></span>
+              </div>
+            </div>
+            <div class="contact-form__field contact-form__field--full">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="Type your message here…" data-fs-field></textarea>
+              <span class="contact-form__field-error" data-fs-error="message" role="alert"></span>
+            </div>
+            <button type="submit" class="btn btn-arrow contact-form__submit" data-fs-submit-btn>Send message</button>
+          </form>
+
+          <aside class="contact-section__sidebar" aria-labelledby="contact-sidebar-heading">
+            <h3 id="contact-sidebar-heading" class="contact-section__sidebar-title">Want to reach out directly?</h3>
+            <p class="contact-section__sidebar-text">Call or text <a href="tel:+15157074982">(515) 707-4982</a> for a faster conversation about listings, offers, or timing.</p>
+            <p class="contact-section__sidebar-subtitle">Follow on social media</p>
+            <div class="contact-section__social">
+              <a href="https://www.facebook.com/MichaelHarrisHomes" class="contact-section__social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+              <a href="https://www.realtor.com/realestateagents/56b3495d89a68901006cc687" class="contact-section__social-link" target="_blank" rel="noopener noreferrer" aria-label="Realtor.com">R</a>
+              <a href="https://www.zillow.com/profile/michael%20harris3" class="contact-section__social-link" target="_blank" rel="noopener noreferrer" aria-label="Zillow">Z</a>
+              <a href="https://www.homes.com/real-estate-agents/michael-harris/2wdrwqc/" class="contact-section__social-link" target="_blank" rel="noopener noreferrer" aria-label="Homes.com">H</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to form CTA -->
     <section class="cta-section-left">
       <div class="cta-inner">
         <div>
-          <h2>Schedule A Call With Me</h2>
-          <p>Prefer to talk? Schedule a time that works for you.</p>
+          <h2>Still have questions?</h2>
+          <p>Jump back to the form above, call (515) 707-4982, or send a quick message.</p>
           <div class="btn-group">
-            <a href="#" class="btn">Schedule A Call</a>
-            <a href="buy.html" class="btn-outline">View Listings</a>
+            <a href="#contact-form" class="btn">Go to contact form</a>
+            <a href="buy.html" class="btn-outline">Buying</a>
           </div>
         </div>
         <div></div>
@@ -88,7 +161,7 @@
 
   <footer>
     <div class="footer-inner">
-      <div class="footer-left">
+      <div class="footer-brand">
         <div class="logo">Michael Harris</div>
         <div class="logo-tagline">Via Group, Realtors</div>
         <div class="footer-logos">
@@ -96,7 +169,7 @@
           <img src="images/NARlogo2.jpg" alt="National Association of Realtors" class="footer-logo" loading="lazy">
         </div>
       </div>
-      <div class="footer-right">
+      <nav class="footer-mid" aria-label="Footer">
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -105,16 +178,33 @@
           <li><a href="contact.html">Contact</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
-        <div class="footer-social">
+        <div class="footer-social" aria-label="Social profiles">
           <a href="https://www.facebook.com/MichaelHarrisHomes" target="_blank" rel="noopener" aria-label="Facebook">f</a>
           <a href="https://www.realtor.com/realestateagents/56b3495d89a68901006cc687" target="_blank" rel="noopener" aria-label="Realtor.com Profile">R</a>
           <a href="https://www.zillow.com/profile/michael%20harris3" target="_blank" rel="noopener" aria-label="Zillow Profile">Z</a>
           <a href="https://www.homes.com/real-estate-agents/michael-harris/2wdrwqc/" target="_blank" rel="noopener" aria-label="Homes.com Profile">H</a>
         </div>
-        <p class="company-info">Copyright © 2026. All rights reserved.<br>Michael Harris. Via Group, Realtors – Broker.<br>1200 Valley West Dr, West Des Moines, IA 50266. (515) 707-4982</p>
+      </nav>
+      <div class="footer-newsletter" aria-labelledby="footer-newsletter-heading">
+        <p id="footer-newsletter-heading" class="footer-newsletter__title">Newsletter</p>
+        <p class="footer-newsletter__hint">Market updates &amp; tips by email</p>
+        <form class="footer-newsletter-form" action="https://formspree.io/f/xqegdjvw" method="POST">
+          <p data-fs-error="" class="footer-newsletter__fs-msg" role="alert"></p>
+          <p data-fs-success class="footer-newsletter__fs-msg" role="status" tabindex="-1"></p>
+          <div class="footer-newsletter__row">
+            <input type="email" name="email" required placeholder="Your email" autocomplete="email" aria-label="Email" data-fs-field>
+            <button type="submit" class="btn footer-newsletter__btn" data-fs-submit-btn>Subscribe</button>
+          </div>
+          <span class="footer-newsletter__field-error" data-fs-error="email" role="alert"></span>
+        </form>
+      </div>
+      <div class="footer-bottom">
+        <p class="company-info">Copyright © 2026. All rights reserved.<br>Michael Harris. Via Group, Realtors – Broker.<br>2700 Westown Parkway, Suite 200, West Des Moines, IA 50266. <a href="tel:+15157074982">(515) 707-4982</a></p>
       </div>
     </div>
   </footer>
 
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
