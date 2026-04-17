@@ -20,8 +20,8 @@
       <ul id="primary-nav" class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="buy.html">Buy</a></li>
-        <li><a href="sell.html">Sell</a></li>
+        <li class="nav-has-dropdown"><a href="buy.html">Buy <span class="nav-chevron" aria-hidden="true">&#9660;</span></a><ul class="nav-dropdown"><li><a href="buy.html#buying-process">Buying Process</a></li><li><a href="buy.html#buyers-resources">Buyer Resources</a></li></ul></li>
+        <li class="nav-has-dropdown"><a href="sell.html">Sell <span class="nav-chevron" aria-hidden="true">&#9660;</span></a><ul class="nav-dropdown"><li><a href="sell.html#home-valuation">Home Valuation</a></li><li><a href="sell.html#selling-process">Selling Process</a></li><li><a href="sell.html#marketing-strategy">Marketing Strategy</a></li></ul></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="blog.html">Blog</a></li>
       </ul>
@@ -39,10 +39,9 @@
     <section class="hero site-hero hero--about">
       <div class="hero-content">
         <h1>Get to Know Michael Harris</h1>
-        <p>An accomplished Des Moines Area agent with 22 years of experience—strategic, personable, and dedicated to your success.</p>
+        <p>An accomplished Des Moines Area agent—strategic, personable, and dedicated to your success.</p>
         <div class="btn-group">
           <a href="contact.html" class="btn btn-arrow" data-contact-modal-open>Send an email</a>
-          <a href="buy.html" class="btn-outline">Buying</a>
         </div>
       </div>
     </section>
@@ -58,33 +57,83 @@
           <p>Michael is an accomplished Des Moines Area agent who brings a strategic yet personable approach to the home buying and home selling process. Michael has built a reputation for his refreshingly friendly customer care and proven ability to guide buyers to obtain the best value for their dream home, and to assist sellers to a smooth, stress-free sale of their home.</p>
           <p>Michael Harris · Via Group, Realtors – Broker</p>
         </div>
-        <div class="about-stats-grid">
-          <div class="data-stat-card">
-            <div class="num">22</div>
-            <p>Years of experience</p>
-          </div>
-          <div class="data-stat-card">
-            <div class="num">5.0</div>
-            <p>Overall rating</p>
-          </div>
-          <div class="data-stat-card">
-            <div class="num">6</div>
-            <p>Recent sales</p>
-          </div>
-          <div class="data-stat-card">
-            <div class="num">$162k–$400k</div>
-            <p>Price range</p>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- Affiliations -->
-    <section style="padding: var(--section-spacing) 0; background: #f9fafb;">
-      <h2 class="section-title" style="text-align: center;">Affiliations</h2>
-      <div class="affiliations-logos">
-        <img src="images/Vialogo1.jfif" alt="Via Group, Realtors" loading="lazy">
-        <img src="images/NARlogo2.jpg" alt="National Association of Realtors" loading="lazy">
+    <section class="dm-areas-section" id="des-moines-areas" aria-labelledby="dm-areas-heading">
+      <div class="dm-areas-inner">
+        <div class="dm-areas-split">
+          <div class="dm-areas-copy">
+            <p class="section-label">Local expertise</p>
+            <h2 id="dm-areas-heading" class="dm-areas-heading">Explore the Des Moines Area</h2>
+            <p class="dm-areas-lead">The metro blends established neighborhoods, new construction, strong employers, and room to grow—so buyers can prioritize schools, commute, nightlife, or quiet blocks and still stay within reach of downtown.</p>
+            <p class="dm-areas-lead dm-areas-lead--secondary">Choose a community for a short overview, then use <strong>All areas</strong> to return to the map—or open buyer resources when you are ready to talk financing and the purchase path.</p>
+            <div class="dm-areas-cta">
+              <a href="buy.html#buyers-resources" class="btn-outline">Buyer resources</a>
+              <a href="contact.html" class="btn" data-contact-modal-open>Discuss locations</a>
+            </div>
+          </div>
+          <div class="dm-areas-grid-wrap">
+            <ul class="dm-areas-grid" id="dm-areas-grid" aria-label="Greater Des Moines communities">
+              <li>
+                <button type="button" class="dm-area-card" data-area="des-moines" aria-expanded="false" aria-controls="dm-area-detail-panel">
+                  <span class="visually-hidden">Show overview for Des Moines</span>
+                  <img class="dm-area-card__img" src="images/pexels-house-1836070_1920.jpg" alt="" width="640" height="480" loading="lazy">
+                  <span class="dm-area-card__overlay" aria-hidden="true"></span>
+                  <span class="dm-area-card__label">Des Moines</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dm-area-card" data-area="west-des-moines" aria-expanded="false" aria-controls="dm-area-detail-panel">
+                  <span class="visually-hidden">Show overview for West Des Moines</span>
+                  <img class="dm-area-card__img" src="images/pexels-house-1867187_1920.jpg" alt="" width="640" height="480" loading="lazy">
+                  <span class="dm-area-card__overlay" aria-hidden="true"></span>
+                  <span class="dm-area-card__label">West Des Moines</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dm-area-card" data-area="waukee" aria-expanded="false" aria-controls="dm-area-detail-panel">
+                  <span class="visually-hidden">Show overview for Waukee</span>
+                  <img class="dm-area-card__img" src="images/paulbr75-new-home-2416180_1920.jpg" alt="" width="640" height="480" loading="lazy">
+                  <span class="dm-area-card__overlay" aria-hidden="true"></span>
+                  <span class="dm-area-card__label">Waukee</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dm-area-card" data-area="ankeny" aria-expanded="false" aria-controls="dm-area-detail-panel">
+                  <span class="visually-hidden">Show overview for Ankeny</span>
+                  <img class="dm-area-card__img" src="images/paulbr75-new-home-2419999_1920.jpg" alt="" width="640" height="480" loading="lazy">
+                  <span class="dm-area-card__overlay" aria-hidden="true"></span>
+                  <span class="dm-area-card__label">Ankeny</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dm-area-card" data-area="urbandale" aria-expanded="false" aria-controls="dm-area-detail-panel">
+                  <span class="visually-hidden">Show overview for Urbandale</span>
+                  <img class="dm-area-card__img" src="images/paulbr75-luxury-home-2409518_1920.jpg" alt="" width="640" height="480" loading="lazy">
+                  <span class="dm-area-card__overlay" aria-hidden="true"></span>
+                  <span class="dm-area-card__label">Urbandale</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dm-area-card" data-area="johnston" aria-expanded="false" aria-controls="dm-area-detail-panel">
+                  <span class="visually-hidden">Show overview for Johnston</span>
+                  <img class="dm-area-card__img" src="images/home_hero.jpg" alt="" width="640" height="480" loading="lazy">
+                  <span class="dm-area-card__overlay" aria-hidden="true"></span>
+                  <span class="dm-area-card__label">Johnston</span>
+                </button>
+              </li>
+            </ul>
+            <div class="dm-areas-detail" id="dm-area-detail-panel" role="region" aria-labelledby="dm-area-detail-title" hidden aria-hidden="true">
+              <button type="button" class="dm-areas-detail__back"><span class="dm-areas-detail__back-icon" aria-hidden="true">←</span> All areas</button>
+              <h3 id="dm-area-detail-title" class="dm-areas-detail__title"></h3>
+              <div class="dm-areas-detail__body"></div>
+              <div class="dm-areas-detail__actions">
+                <a href="contact.html" class="btn" data-contact-modal-open>Discuss this area</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -107,20 +156,7 @@
             <li>New Construction</li>
           </ul>
         </div>
-        <div class="about-details-block">
-          <h2 class="section-title">Awards</h2>
-          <ul class="about-list">
-            <li>Coldwell Banker International Diamond Society</li>
-            <li>Coldwell Banker Mid America Group President's Club (Top 10% in Des Moines market)</li>
-          </ul>
-        </div>
       </div>
-    </section>
-
-    <!-- Areas Served -->
-    <section style="padding: var(--section-spacing) 0;">
-      <h2 class="section-title" style="text-align: center;">Areas Served</h2>
-      <p class="areas-served-text">Altoona · Ankeny · Bondurant · Carlisle · Clive · Des Moines · Dexter · Earlham · Granger · Grimes · Indianola · Johnston · Linden · Madrid · New Virginia · Norwalk · Osceola · Panora · Pleasant Hill · Pleasantville · Polk City · Redfield · Runnells · St. Charles · Urbandale · Waukee · West Des Moines · Woodward</p>
     </section>
 
     <!-- Client Testimonials -->
@@ -132,37 +168,73 @@
           <div class="testimonial-card__accent" aria-hidden="true"></div>
           <p class="testimonial-card__stars" aria-hidden="true">★★★★★</p>
           <p class="testimonial-quote">Mike is great to work with! I have used him multiple times now to both buy and sell, every time was a great experience. Highly recommend!</p>
-          <cite class="testimonial-author">— Steven Oldfather</cite>
+          <div class="testimonial-attribution">
+            <span class="testimonial-author-abbr">— S.O.</span>
+            <details class="testimonial-name-toggle">
+              <summary>See full name</summary>
+              <cite class="testimonial-author testimonial-author--full">Steven Oldfather</cite>
+            </details>
+          </div>
         </article>
         <article class="testimonial-card">
           <div class="testimonial-card__accent" aria-hidden="true"></div>
           <p class="testimonial-card__stars" aria-hidden="true">★★★★★</p>
           <p class="testimonial-quote">Michael was amazing, he appeared as our representative more times that I can count when we couldn't be there!</p>
-          <cite class="testimonial-author">— Brooke Edmiston</cite>
+          <div class="testimonial-attribution">
+            <span class="testimonial-author-abbr">— B.E.</span>
+            <details class="testimonial-name-toggle">
+              <summary>See full name</summary>
+              <cite class="testimonial-author testimonial-author--full">Brooke Edmiston</cite>
+            </details>
+          </div>
         </article>
         <article class="testimonial-card">
           <div class="testimonial-card__accent" aria-hidden="true"></div>
           <p class="testimonial-card__stars" aria-hidden="true">★★★★★</p>
           <p class="testimonial-quote">I enjoyed working with Mike Harris. He was straight forward and always kept me up to speed with appointments and necessary updates. Thank you VIA</p>
-          <cite class="testimonial-author">— Concetta Morales</cite>
+          <div class="testimonial-attribution">
+            <span class="testimonial-author-abbr">— C.M.</span>
+            <details class="testimonial-name-toggle">
+              <summary>See full name</summary>
+              <cite class="testimonial-author testimonial-author--full">Concetta Morales</cite>
+            </details>
+          </div>
         </article>
         <article class="testimonial-card">
           <div class="testimonial-card__accent" aria-hidden="true"></div>
           <p class="testimonial-card__stars" aria-hidden="true">★★★★★</p>
           <p class="testimonial-quote">Over the years, I have worked with 4 different agents and Michael is the best, by far, out of any that I've dealt with. He's professional, personable, and is always willing to be available. I can't say enough great things about working with Michael! Michael made the whole process 100% painless, it was a fun experience and not stressful! Thank you, Mike!!</p>
-          <cite class="testimonial-author">— Jolie, Urbandale</cite>
+          <div class="testimonial-attribution">
+            <span class="testimonial-author-abbr">— J., U.</span>
+            <details class="testimonial-name-toggle">
+              <summary>See full name</summary>
+              <cite class="testimonial-author testimonial-author--full">Jolie, Urbandale</cite>
+            </details>
+          </div>
         </article>
         <article class="testimonial-card">
           <div class="testimonial-card__accent" aria-hidden="true"></div>
           <p class="testimonial-card__stars" aria-hidden="true">★★★★★</p>
           <p class="testimonial-quote">Mike did a great job for us! His customer service is phenomenal. He goes above and beyond to ensure his customers are taken care of and understand the process. We had a great experience and will utilize his services in the future...wherever he works or whomever he works for.</p>
-          <cite class="testimonial-author">— Mike Nagl, Waukee</cite>
+          <div class="testimonial-attribution">
+            <span class="testimonial-author-abbr">— M.N., W.</span>
+            <details class="testimonial-name-toggle">
+              <summary>See full name</summary>
+              <cite class="testimonial-author testimonial-author--full">Mike Nagl, Waukee</cite>
+            </details>
+          </div>
         </article>
         <article class="testimonial-card">
           <div class="testimonial-card__accent" aria-hidden="true"></div>
           <p class="testimonial-card__stars" aria-hidden="true">★★★★★</p>
           <p class="testimonial-quote">Mike has helped us purchase two homes and sell one. We wouldn't work with anyone else!</p>
-          <cite class="testimonial-author">— Larry Dempsey, Des Moines, IA</cite>
+          <div class="testimonial-attribution">
+            <span class="testimonial-author-abbr">— L.D.</span>
+            <details class="testimonial-name-toggle">
+              <summary>See full name</summary>
+              <cite class="testimonial-author testimonial-author--full">Larry Dempsey, Des Moines, IA</cite>
+            </details>
+          </div>
         </article>
       </div>
     </section>
@@ -189,8 +261,8 @@
         <div class="logo">Michael Harris</div>
         <div class="logo-tagline">Via Group, Realtors</div>
         <div class="footer-logos">
-          <img src="images/Vialogo1.jfif" alt="Via Group, Realtors" class="footer-logo" loading="lazy">
-          <img src="images/NARlogo2.jpg" alt="National Association of Realtors" class="footer-logo" loading="lazy">
+          <span class="footer-logo-wrap"><img src="images/logo-white.png" alt="Via Group, Realtors" loading="lazy"></span>
+          <span class="footer-logo-wrap"><img src="images/nar_membershipmark_black.png" alt="National Association of Realtors" class="nar-logo" loading="lazy"></span>
         </div>
       </div>
       <nav class="footer-mid" aria-label="Footer">
@@ -203,10 +275,10 @@
           <li><a href="blog.html">Blog</a></li>
         </ul>
         <div class="footer-social" aria-label="Social profiles">
-          <a href="https://www.facebook.com/MichaelHarrisHomes" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-          <a href="https://www.realtor.com/realestateagents/56b3495d89a68901006cc687" target="_blank" rel="noopener" aria-label="Realtor.com Profile">R</a>
-          <a href="https://www.zillow.com/profile/michael%20harris3" target="_blank" rel="noopener" aria-label="Zillow Profile">Z</a>
-          <a href="https://www.homes.com/real-estate-agents/michael-harris/2wdrwqc/" target="_blank" rel="noopener" aria-label="Homes.com Profile">H</a>
+          <a href="https://www.facebook.com/MichaelHarrisHomes" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://www.realtor.com/realestateagents/56b3495d89a68901006cc687" rel="noopener" aria-label="Realtor.com Profile">R</a>
+          <a href="https://www.zillow.com/profile/michael%20harris3" rel="noopener" aria-label="Zillow Profile">Z</a>
+          <a href="https://www.homes.com/real-estate-agents/michael-harris/2wdrwqc/" rel="noopener" aria-label="Homes.com Profile">H</a>
         </div>
       </nav>
       <div class="footer-newsletter" aria-labelledby="footer-newsletter-heading">

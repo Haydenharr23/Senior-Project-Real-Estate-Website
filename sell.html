@@ -20,8 +20,8 @@
       <ul id="primary-nav" class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="buy.html">Buy</a></li>
-        <li><a href="sell.html">Sell</a></li>
+        <li class="nav-has-dropdown"><a href="buy.html">Buy <span class="nav-chevron" aria-hidden="true">&#9660;</span></a><ul class="nav-dropdown"><li><a href="buy.html#buying-process">Buying Process</a></li><li><a href="buy.html#buyers-resources">Buyer Resources</a></li></ul></li>
+        <li class="nav-has-dropdown"><a href="sell.html">Sell <span class="nav-chevron" aria-hidden="true">&#9660;</span></a><ul class="nav-dropdown"><li><a href="sell.html#home-valuation">Home Valuation</a></li><li><a href="sell.html#selling-process">Selling Process</a></li><li><a href="sell.html#marketing-strategy">Marketing Strategy</a></li></ul></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="blog.html">Blog</a></li>
       </ul>
@@ -49,23 +49,26 @@
     <section id="home-valuation" class="sell-valuation-section">
       <h2 class="section-title">Home Valuation</h2>
       <p style="text-align: center; color: var(--gray); margin-bottom: 1.5rem;">Tell us a bit about your property and we will follow up with your estimate.</p>
-      <form class="valuation-form" action="#" method="get">
+      <form id="sell-valuation-form" class="valuation-form" action="https://formspree.io/f/xqegdjvw" method="POST">
+        <p data-fs-error="" class="valuation-form__fs-msg form-feedback" role="alert"></p>
+        <p data-fs-success class="valuation-form__fs-msg form-feedback" role="status" tabindex="-1"></p>
+        <input type="text" name="_gotcha" class="valuation-form__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Request your estimate</h3>
         <p style="font-size: 0.875rem; color: var(--gray); margin-bottom: 1rem;">Get your free home value estimate.</p>
         <label for="val-name">Name</label>
-        <input type="text" id="val-name" name="name" placeholder="Your name">
+        <input type="text" id="val-name" name="name" required placeholder="Your name" autocomplete="name" data-fs-field>
         <label for="val-email">Email</label>
-        <input type="email" id="val-email" name="email" placeholder="you@example.com">
+        <input type="email" id="val-email" name="email" required placeholder="you@example.com" autocomplete="email" data-fs-field>
         <label for="val-phone">Phone</label>
-        <input type="tel" id="val-phone" name="phone" placeholder="(515) 555-0100">
+        <input type="tel" id="val-phone" name="phone" required placeholder="(515) 555-0100" autocomplete="tel" data-fs-field>
         <label for="val-message">Message</label>
-        <textarea id="val-message" name="message" placeholder="Property address, timeline, and anything else we should know…"></textarea>
-        <button type="submit" class="btn">Get Your Free Home Value</button>
+        <textarea id="val-message" name="message" required placeholder="Property address, timeline, and anything else we should know…" data-fs-field></textarea>
+        <button type="submit" class="btn" data-fs-submit-btn>Get Your Free Home Value</button>
       </form>
     </section>
 
     <!-- Selling Process -->
-    <section>
+    <section id="selling-process">
       <h2 class="section-title" style="text-align: center;">Selling Process</h2>
       <p style="text-align: center; color: var(--gray); margin-bottom: 2rem;">A proven approach to maximize your home's value and minimize stress.</p>
       <div class="process-grid">
@@ -109,7 +112,7 @@
     </section>
 
     <!-- Marketing / Strategy -->
-    <section>
+    <section id="marketing-strategy">
       <div class="marketing-strategy-inner marketing-strategy-inner--with-photo">
         <figure class="marketing-strategy-photo">
           <img src="images/home5.jpg" alt="Bright living space in a Des Moines area listing" width="900" height="1200" loading="lazy">
@@ -147,29 +150,541 @@
       </div>
     </section>
 
-    <!-- Results / Statistics -->
-    <section>
-      <h2 class="section-title" style="text-align: center;">Results / Statistics.</h2>
-      <div class="results-stats-grid">
-        <div class="results-stat-card">
-          <div class="num">200+</div>
-          <h4>Average Sale Price</h4>
-          <p>Track record across diverse price points and neighborhoods throughout the Des Moines metro.</p>
+    <!-- Seller Guide Tabs -->
+    <section id="seller-guide" class="seller-tabs-section">
+      <div class="seller-tabs-inner">
+        <h2 class="section-title section-title--center">Seller's Guide</h2>
+        <p class="section-intro section-intro--narrow">Everything you need to know before you list. Click a topic to explore.</p>
+        <div class="seller-tabs" role="tablist" aria-label="Seller guide topics">
+          <button class="seller-tab seller-tab--active" role="tab" aria-selected="true" aria-controls="stab-market" id="stab-btn-market">Market Conditions</button>
+          <button class="seller-tab" role="tab" aria-selected="false" aria-controls="stab-move" id="stab-btn-move">Moving Up or Down</button>
+          <button class="seller-tab" role="tab" aria-selected="false" aria-controls="stab-pricing" id="stab-btn-pricing">Pricing Strategy</button>
+          <button class="seller-tab" role="tab" aria-selected="false" aria-controls="stab-checklist" id="stab-btn-checklist">Pre-Listing Checklist</button>
+          <button class="seller-tab" role="tab" aria-selected="false" aria-controls="stab-offers" id="stab-btn-offers">Offers &amp; Net Proceeds</button>
         </div>
-        <div class="results-stat-card">
-          <div class="num">97%</div>
-          <h4>Market Price</h4>
-          <p>Pricing and positioning grounded in current comps so your list reflects what buyers are willing to pay.</p>
+
+        <!-- Panel: Market Conditions -->
+        <div class="seller-tab-panel" id="stab-market" role="tabpanel" aria-labelledby="stab-btn-market">
+          <p class="seller-tab-panel__desc">Strong equity, limited inventory, and steady demand continue to favor sellers in the Des Moines area.</p>
+          <div class="seller-stats-grid">
+            <div class="seller-stat-card">
+              <div class="seller-stat-num">~$400K</div>
+              <h4>Median Home Price</h4>
+              <p>Up from $155,600 in 2012 — roughly 7% annual appreciation over more than a decade.</p>
+            </div>
+            <div class="seller-stat-card">
+              <div class="seller-stat-num">16.8%</div>
+              <h4>Below Pre-Pandemic Inventory</h4>
+              <p>Supply is still tight. Fewer homes on the market means your listing gets more attention.</p>
+            </div>
+            <div class="seller-stat-card">
+              <div class="seller-stat-num">4 in 5</div>
+              <h4>Homeowners Under 6% Rate</h4>
+              <p>Rate lock-in limits how many sellers list — keeping competition low and your listing visible.</p>
+            </div>
+            <div class="seller-stat-card">
+              <div class="seller-stat-num">1–4%</div>
+              <h4>Expected Price Growth</h4>
+              <p>Home values are projected to keep rising, making this a stable time to sell and reinvest.</p>
+            </div>
+          </div>
         </div>
-        <div class="results-stat-card">
-          <div class="num">34+</div>
-          <h4>Average Days On Market</h4>
-          <p>Focused marketing, quality showings, and responsive follow-up to keep momentum on serious listings.</p>
+
+        <!-- Panel: Moving Up or Down -->
+        <div class="seller-tab-panel seller-tab-panel--hidden" id="stab-move" role="tabpanel" aria-labelledby="stab-btn-move">
+          <p class="seller-tab-panel__desc">Selling is both a financial and a lifestyle decision. Here's what to consider depending on which direction you're headed.</p>
+          <div class="move-cards">
+            <div class="move-card move-card--up">
+              <div class="move-card__icon">&#8679;</div>
+              <h3>Moving Up</h3>
+              <ul>
+                <li>Need more space — kids, home office, or extended family</li>
+                <li>Ready for a neighborhood or amenity upgrade</li>
+                <li>Strong equity gives you real buying power</li>
+                <li>Employment stability supports a larger payment</li>
+              </ul>
+            </div>
+            <div class="move-card__divider"><span>or</span></div>
+            <div class="move-card move-card--down">
+              <div class="move-card__icon">&#8681;</div>
+              <h3>Moving Down</h3>
+              <ul>
+                <li>Lower costs — utilities, taxes, and maintenance</li>
+                <li>Simpler living with less upkeep</li>
+                <li>Better location or accessibility</li>
+                <li>Up to $500K capital gains exclusion (married) / $250K (single)</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="results-stat-card">
-          <div class="num">100+</div>
-          <h4>Clients</h4>
-          <p>Repeat business and referrals from sellers who value clear communication and straightforward advice.</p>
+
+        <!-- Panel: Pricing Strategy -->
+        <div class="seller-tab-panel seller-tab-panel--hidden" id="stab-pricing" role="tabpanel" aria-labelledby="stab-btn-pricing">
+          <p class="seller-tab-panel__desc">Price is the most powerful lever you control as a seller. Here's what happens at each end of the spectrum.</p>
+          <div class="pricing-spectrum">
+            <div class="pricing-col pricing-col--low">
+              <div class="pricing-col__label">Too Low</div>
+              <ul>
+                <li>Leaves money on the table</li>
+                <li>Buyers may assume something is wrong</li>
+                <li>Harder to negotiate back up</li>
+              </ul>
+            </div>
+            <div class="pricing-col pricing-col--right">
+              <div class="pricing-col__label">Just Right</div>
+              <ul>
+                <li>Attracts serious, qualified buyers</li>
+                <li>Generates competitive offers</li>
+                <li>Sells within weeks, not months</li>
+                <li>Maximizes your net proceeds</li>
+              </ul>
+            </div>
+            <div class="pricing-col pricing-col--high">
+              <div class="pricing-col__label">Too High</div>
+              <ul>
+                <li>Scares buyers away immediately</li>
+                <li>Home sits on the market longer</li>
+                <li>Price reductions signal weakness</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel: Pre-Listing Checklist -->
+        <div class="seller-tab-panel seller-tab-panel--hidden" id="stab-checklist" role="tabpanel" aria-labelledby="stab-btn-checklist">
+          <p class="seller-tab-panel__desc">Getting your home market-ready before you list puts you in control — and typically leads to faster sales and stronger offers.</p>
+          <div class="pre-listing-grid">
+            <div class="checklist-group">
+              <h4>Preparation</h4>
+              <label class="checklist-item"><input type="checkbox"><span>Declutter every room</span></label>
+              <label class="checklist-item"><input type="checkbox"><span>Rent storage if needed</span></label>
+              <label class="checklist-item"><input type="checkbox"><span>Deep clean the entire home</span></label>
+              <label class="checklist-item"><input type="checkbox"><span>Make small visual upgrades (paint, fixtures)</span></label>
+              <label class="checklist-item"><input type="checkbox"><span>Improve curb appeal (landscaping, entry)</span></label>
+            </div>
+            <div class="checklist-group">
+              <h4>Inspection &amp; Pricing</h4>
+              <label class="checklist-item"><input type="checkbox"><span>Schedule a pre-listing inspection</span></label>
+              <label class="checklist-item"><input type="checkbox"><span>Address or disclose any major issues</span></label>
+              <label class="checklist-item"><input type="checkbox"><span>Review your mortgage payoff balance</span></label>
+              <label class="checklist-item"><input type="checkbox"><span>Understand your net equity estimate</span></label>
+            </div>
+            <div class="checklist-group">
+              <h4>Working with Michael</h4>
+              <label class="checklist-item"><input type="checkbox"><span>Request a free home valuation</span></label>
+              <label class="checklist-item"><input type="checkbox"><span>Review a comparative market analysis</span></label>
+              <label class="checklist-item"><input type="checkbox"><span>Agree on pricing and listing strategy</span></label>
+              <label class="checklist-item"><input type="checkbox"><span>Schedule professional photography</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel: Offers & Net Proceeds -->
+        <div class="seller-tab-panel seller-tab-panel--hidden" id="stab-offers" role="tabpanel" aria-labelledby="stab-btn-offers">
+          <p class="seller-tab-panel__desc">Strong offers are about more than price. Use the topics below to think through your net walkaway and negotiation levers — then lean on Michael when it is time to respond.</p>
+          <div class="guide-accordion" role="region" aria-label="Offers and net proceeds topics">
+            <details class="guide-accordion__item">
+              <summary>What affects your net proceeds?</summary>
+              <div class="guide-accordion__body">
+                <p>“Net” is roughly sale price minus mortgage payoff, commissions, title fees, prorated taxes, and any agreed seller credits or repairs — each contract line matters.</p>
+                <ul>
+                  <li>Ask for a seller net sheet before you list so you are not surprised at closing.</li>
+                  <li>Prepay penalties or second liens reduce what you take home — disclose them early.</li>
+                  <li>Buyer-requested closing cost credits come out of your side; weigh them against a higher offer with fewer credits.</li>
+                </ul>
+              </div>
+            </details>
+            <details class="guide-accordion__item">
+              <summary>CMA vs. appraisal (for your buyer’s loan)</summary>
+              <div class="guide-accordion__body">
+                <p>Your list price is informed by a comparative market analysis (CMA). The buyer’s lender still orders an independent appraisal. They usually align, but not always.</p>
+                <ul>
+                  <li>If an appraisal falls short, you may reduce price, meet in the middle, or risk the deal — your agent will map options.</li>
+                  <li>Clean presentation and real comps up front reduce appraisal drama.</li>
+                </ul>
+              </div>
+            </details>
+            <details class="guide-accordion__item">
+              <summary>Common incentives buyers ask for</summary>
+              <div class="guide-accordion__body">
+                <p>Buyers may request rate buy-downs, closing cost credits, home warranties, or personal property. Each has a dollar value — compare apples to apples when reviewing multiple offers.</p>
+                <ul>
+                  <li>A lower offer with zero credits can net more than a higher offer loaded with concessions.</li>
+                  <li>Deadlines and financing type (conventional vs. FHA/VA) affect certainty, not just price.</li>
+                </ul>
+              </div>
+            </details>
+            <details class="guide-accordion__item">
+              <summary>Counter-offer vs. accept</summary>
+              <div class="guide-accordion__body">
+                <p>You can accept, reject, or counter any offer. A counter restarts the clock on certain response periods — strategy matters in multi-offer situations.</p>
+                <ul>
+                  <li>Prioritize your non-negotiables (close date, rent-back, inspection cap).</li>
+                  <li>Michael will help you craft counters that protect your net without chasing buyers away.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+          <div class="guide-checklist-block">
+            <h3 class="guide-checklist-block__title">Offer review checklist</h3>
+            <p class="guide-checklist-block__intro">Walk through each offer with this list so nothing important gets lost in the paperwork.</p>
+            <div class="guide-checklist-grid">
+              <div class="checklist-group">
+                <h4>Strength &amp; certainty</h4>
+                <label class="checklist-item"><input type="checkbox"><span>Pre-approval letter matches offer names</span></label>
+                <label class="checklist-item"><input type="checkbox"><span>Financing type &amp; down payment noted</span></label>
+                <label class="checklist-item"><input type="checkbox"><span>Earnest money amount acceptable</span></label>
+                <label class="checklist-item"><input type="checkbox"><span>Contingency timelines reviewed</span></label>
+              </div>
+              <div class="checklist-group">
+                <h4>Terms &amp; net</h4>
+                <label class="checklist-item"><input type="checkbox"><span>Requested seller credits itemized</span></label>
+                <label class="checklist-item"><input type="checkbox"><span>Personal property / rent-back spelled out</span></label>
+                <label class="checklist-item"><input type="checkbox"><span>Estimated net compared to other offers</span></label>
+                <label class="checklist-item"><input type="checkbox"><span>Response deadline on calendar</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Seller Financial Tools (InTouch: use URL ?t=financialapp&id=… — see inline script before api.js) -->
+    <section id="seller-resources" class="seller-tools-section">
+      <div class="seller-tools-inner">
+        <h2 class="section-title section-title--center">Financial Tools</h2>
+        <p class="section-intro section-intro--narrow">Use these calculators and resources to get a clearer picture of your financial position before you list.</p>
+        <div class="seller-tools-embed">
+          <div id="fin-tools" class="fin-tools">
+
+            <!-- Tool selection menu -->
+            <div class="fin-tools__menu" id="fin-menu">
+              <div class="fin-tools__grid">
+                <button class="fin-tool-card" data-tool="unpaid-balance">
+                  <div class="fin-tool-card__icon">🏦</div>
+                  <h3>Unpaid Balance</h3>
+                  <p>Find your remaining mortgage balance at any payment.</p>
+                </button>
+                <button class="fin-tool-card" data-tool="high-low">
+                  <div class="fin-tool-card__icon">📊</div>
+                  <h3>High-Low Estimate</h3>
+                  <p>See your net proceeds across a range of sale prices.</p>
+                </button>
+                <button class="fin-tool-card" data-tool="hold-or-sell">
+                  <div class="fin-tool-card__icon">🔄</div>
+                  <h3>Hold or Sell &amp; Buy</h3>
+                  <p>Compare staying put against selling and buying now.</p>
+                </button>
+                <button class="fin-tool-card" data-tool="refinance">
+                  <div class="fin-tool-card__icon">💲</div>
+                  <h3>Refinance Analysis</h3>
+                  <p>Calculate your savings and break-even on a refinance.</p>
+                </button>
+                <button class="fin-tool-card" data-tool="buydown">
+                  <div class="fin-tool-card__icon">📉</div>
+                  <h3>2/1 Buydown</h3>
+                  <p>See payments when the rate steps up over two years.</p>
+                </button>
+                <button class="fin-tool-card" data-tool="concessions">
+                  <div class="fin-tool-card__icon">🤝</div>
+                  <h3>Financing Concessions</h3>
+                  <p>Estimate how seller concessions affect your net proceeds.</p>
+                </button>
+                <button class="fin-tool-card" data-tool="comp-80-10-10">
+                  <div class="fin-tool-card__icon">⚖️</div>
+                  <h3>80/10/10 Comparison</h3>
+                  <p>Piggyback loan vs. single loan with PMI — which costs less?</p>
+                </button>
+                <button class="fin-tool-card" data-tool="income">
+                  <div class="fin-tool-card__icon">💼</div>
+                  <h3>Income Estimator</h3>
+                  <p>Find the income needed to qualify for a given loan.</p>
+                </button>
+                <button class="fin-tool-card" data-tool="assumption">
+                  <div class="fin-tool-card__icon">🔑</div>
+                  <h3>Assumption Comparison</h3>
+                  <p>Compare assuming an existing mortgage vs. new financing.</p>
+                </button>
+              </div>
+            </div>
+
+            <!-- 1. Unpaid Balance -->
+            <div class="fin-tools__panel" id="fin-panel-unpaid-balance" hidden>
+              <button class="fin-tools__back" data-fin-back>&#8592; Back to Tools</button>
+              <h3 class="fin-tools__panel-title">Unpaid Balance</h3>
+              <p class="fin-tools__panel-desc">Calculate the remaining balance on a mortgage at any payment number.</p>
+              <div class="fin-calc">
+                <div class="fin-calc__fields">
+                  <label for="fin-ub-amount">Original Loan Amount</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-ub-amount" value="320000" min="0"></div>
+                  <label for="fin-ub-rate">Interest Rate (%)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-ub-rate" value="6.5" min="0" max="30" step="0.01"></div>
+                  <label for="fin-ub-term">Loan Term (years)</label>
+                  <div class="fin-input-wrap"><span>yr</span><input type="number" id="fin-ub-term" value="30" min="1" max="50"></div>
+                  <label for="fin-ub-paid">Payments Made</label>
+                  <div class="fin-input-wrap"><span>mo</span><input type="number" id="fin-ub-paid" value="36" min="0"></div>
+                </div>
+                <div class="fin-calc__results">
+                  <div class="fin-result-row"><span>Monthly Payment (P&amp;I)</span><span id="fin-ub-r-payment">—</span></div>
+                  <div class="fin-result-row"><span>Total Paid So Far</span><span id="fin-ub-r-totalpaid">—</span></div>
+                  <div class="fin-result-row"><span>Principal Paid</span><span id="fin-ub-r-principal">—</span></div>
+                  <div class="fin-result-row"><span>Interest Paid</span><span id="fin-ub-r-interest">—</span></div>
+                  <div class="fin-result-row fin-result-row--total"><span>Unpaid Balance</span><span id="fin-ub-r-balance">—</span></div>
+                  <p class="fin-disclaimer">*Estimate only. Request an official payoff quote from your lender.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. High-Low Estimate -->
+            <div class="fin-tools__panel" id="fin-panel-high-low" hidden>
+              <button class="fin-tools__back" data-fin-back>&#8592; Back to Tools</button>
+              <h3 class="fin-tools__panel-title">High-Low Estimate</h3>
+              <p class="fin-tools__panel-desc">Compare your net proceeds at a low and high sale price.</p>
+              <div class="fin-calc">
+                <div class="fin-calc__fields">
+                  <label for="fin-hl-low">Low Sale Price</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-hl-low" value="375000" min="0"></div>
+                  <label for="fin-hl-high">High Sale Price</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-hl-high" value="425000" min="0"></div>
+                  <label for="fin-hl-mortgage">Mortgage Balance</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-hl-mortgage" value="200000" min="0"></div>
+                  <label for="fin-hl-commission">Commission (%)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-hl-commission" value="6" min="0" max="100" step="0.1"></div>
+                  <label for="fin-hl-closing">Seller Closing Costs (%)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-hl-closing" value="1" min="0" max="100" step="0.1"></div>
+                </div>
+                <div class="fin-calc__results">
+                  <div class="fin-result-row fin-result-row--label"><span>At Low Price</span><span id="fin-hl-r-low-price">—</span></div>
+                  <div class="fin-result-row fin-result-row--sub"><span>&#8722; Costs &amp; Mortgage</span><span id="fin-hl-r-low-costs">—</span></div>
+                  <div class="fin-result-row fin-result-row--total"><span>Net (Low)</span><span id="fin-hl-r-low-net">—</span></div>
+                  <div class="fin-result-row fin-result-row--label" style="margin-top:.75rem"><span>At High Price</span><span id="fin-hl-r-high-price">—</span></div>
+                  <div class="fin-result-row fin-result-row--sub"><span>&#8722; Costs &amp; Mortgage</span><span id="fin-hl-r-high-costs">—</span></div>
+                  <div class="fin-result-row fin-result-row--total"><span>Net (High)</span><span id="fin-hl-r-high-net">—</span></div>
+                  <div class="fin-result-row" style="margin-top:.5rem"><span>Difference</span><span id="fin-hl-r-diff">—</span></div>
+                  <p class="fin-disclaimer">*Estimates only. Actual costs vary by transaction.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Hold or Sell & Buy -->
+            <div class="fin-tools__panel" id="fin-panel-hold-or-sell" hidden>
+              <button class="fin-tools__back" data-fin-back>&#8592; Back to Tools</button>
+              <h3 class="fin-tools__panel-title">Hold or Sell &amp; Buy</h3>
+              <p class="fin-tools__panel-desc">Compare your equity if you hold vs. sell now and buy a new home.</p>
+              <div class="fin-calc">
+                <div class="fin-calc__fields">
+                  <label for="fin-hs-value">Current Home Value</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-hs-value" value="400000" min="0"></div>
+                  <label for="fin-hs-balance">Current Mortgage Balance</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-hs-balance" value="200000" min="0"></div>
+                  <label for="fin-hs-appreciate">Annual Appreciation (%)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-hs-appreciate" value="3" min="0" max="20" step="0.1"></div>
+                  <label for="fin-hs-years">Years to Hold</label>
+                  <div class="fin-input-wrap"><span>yr</span><input type="number" id="fin-hs-years" value="5" min="1" max="30"></div>
+                  <label for="fin-hs-commission">Commission if Sold Now (%)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-hs-commission" value="6" min="0" max="100" step="0.1"></div>
+                </div>
+                <div class="fin-calc__results">
+                  <div class="fin-result-row fin-result-row--label"><span>If You Hold</span><span></span></div>
+                  <div class="fin-result-row fin-result-row--sub"><span>Future Home Value</span><span id="fin-hs-r-future-value">—</span></div>
+                  <div class="fin-result-row fin-result-row--total"><span>Projected Equity</span><span id="fin-hs-r-hold-equity">—</span></div>
+                  <div class="fin-result-row fin-result-row--label" style="margin-top:.75rem"><span>If You Sell Now</span><span></span></div>
+                  <div class="fin-result-row fin-result-row--sub"><span>Estimated Net Proceeds</span><span id="fin-hs-r-net">—</span></div>
+                  <div class="fin-result-row fin-result-row--total"><span>Equity Available Now</span><span id="fin-hs-r-sell-equity">—</span></div>
+                  <p class="fin-disclaimer">*Appreciation and mortgage paydown are estimated. Actual results vary.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Refinance Analysis -->
+            <div class="fin-tools__panel" id="fin-panel-refinance" hidden>
+              <button class="fin-tools__back" data-fin-back>&#8592; Back to Tools</button>
+              <h3 class="fin-tools__panel-title">Refinance Analysis</h3>
+              <p class="fin-tools__panel-desc">See your monthly savings and how quickly you'll break even on closing costs.</p>
+              <div class="fin-calc">
+                <div class="fin-calc__fields">
+                  <label for="fin-rf-balance">Current Loan Balance</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-rf-balance" value="280000" min="0"></div>
+                  <label for="fin-rf-current-rate">Current Rate (%)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-rf-current-rate" value="7.5" min="0" max="30" step="0.01"></div>
+                  <label for="fin-rf-current-term">Remaining Term (years)</label>
+                  <div class="fin-input-wrap"><span>yr</span><input type="number" id="fin-rf-current-term" value="25" min="1" max="50"></div>
+                  <label for="fin-rf-new-rate">New Rate (%)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-rf-new-rate" value="6.0" min="0" max="30" step="0.01"></div>
+                  <label for="fin-rf-new-term">New Term (years)</label>
+                  <div class="fin-input-wrap"><span>yr</span><input type="number" id="fin-rf-new-term" value="30" min="1" max="50"></div>
+                  <label for="fin-rf-costs">Refinance Closing Costs</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-rf-costs" value="5000" min="0"></div>
+                </div>
+                <div class="fin-calc__results">
+                  <div class="fin-result-row"><span>Current Payment</span><span id="fin-rf-r-current">—</span></div>
+                  <div class="fin-result-row"><span>New Payment</span><span id="fin-rf-r-new">—</span></div>
+                  <div class="fin-result-row fin-result-row--total"><span>Monthly Savings</span><span id="fin-rf-r-savings">—</span></div>
+                  <div class="fin-result-row"><span>Break-Even</span><span id="fin-rf-r-breakeven">—</span></div>
+                  <div class="fin-result-row"><span>Total Interest (Current)</span><span id="fin-rf-r-int-current">—</span></div>
+                  <div class="fin-result-row"><span>Total Interest (New)</span><span id="fin-rf-r-int-new">—</span></div>
+                  <p class="fin-disclaimer">*Estimates only. A longer new term may increase total interest paid despite lower payments.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. 2/1 Buydown -->
+            <div class="fin-tools__panel" id="fin-panel-buydown" hidden>
+              <button class="fin-tools__back" data-fin-back>&#8592; Back to Tools</button>
+              <h3 class="fin-tools__panel-title">2/1 Buydown</h3>
+              <p class="fin-tools__panel-desc">Compare payments as the rate steps up to the note rate over two years.</p>
+              <div class="fin-calc">
+                <div class="fin-calc__fields">
+                  <label for="fin-bd-amount">Loan Amount</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-bd-amount" value="320000" min="0"></div>
+                  <label for="fin-bd-rate">Note Rate (full rate, %)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-bd-rate" value="6.5" min="0.1" max="30" step="0.01"></div>
+                  <label for="fin-bd-term">Loan Term (years)</label>
+                  <div class="fin-input-wrap"><span>yr</span><input type="number" id="fin-bd-term" value="30" min="1" max="50"></div>
+                </div>
+                <div class="fin-calc__results">
+                  <div class="fin-result-row"><span>Year 1 Rate</span><span id="fin-bd-r-rate1">—</span></div>
+                  <div class="fin-result-row"><span>Year 1 Payment</span><span id="fin-bd-r-pay1">—</span></div>
+                  <div class="fin-result-row"><span>Year 2 Rate</span><span id="fin-bd-r-rate2">—</span></div>
+                  <div class="fin-result-row"><span>Year 2 Payment</span><span id="fin-bd-r-pay2">—</span></div>
+                  <div class="fin-result-row"><span>Year 3+ Rate</span><span id="fin-bd-r-rate3">—</span></div>
+                  <div class="fin-result-row fin-result-row--total"><span>Year 3+ Payment</span><span id="fin-bd-r-pay3">—</span></div>
+                  <div class="fin-result-row"><span>Total Savings (Yrs 1–2)</span><span id="fin-bd-r-savings">—</span></div>
+                  <p class="fin-disclaimer">*Seller or lender typically funds the buydown. Confirm cost with your lender.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Financing Concessions -->
+            <div class="fin-tools__panel" id="fin-panel-concessions" hidden>
+              <button class="fin-tools__back" data-fin-back>&#8592; Back to Tools</button>
+              <h3 class="fin-tools__panel-title">Financing Concessions</h3>
+              <p class="fin-tools__panel-desc">See how paying buyer closing costs affects your net proceeds.</p>
+              <div class="fin-calc">
+                <div class="fin-calc__fields">
+                  <label for="fin-fc-price">Sale Price</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-fc-price" value="400000" min="0"></div>
+                  <label for="fin-fc-concession">Seller Concession ($)</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-fc-concession" value="8000" min="0"></div>
+                  <label for="fin-fc-mortgage">Mortgage Balance</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-fc-mortgage" value="200000" min="0"></div>
+                  <label for="fin-fc-commission">Commission (%)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-fc-commission" value="6" min="0" max="100" step="0.1"></div>
+                  <label for="fin-fc-closing">Other Closing Costs (%)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-fc-closing" value="1" min="0" max="100" step="0.1"></div>
+                </div>
+                <div class="fin-calc__results">
+                  <div class="fin-result-row"><span>Sale Price</span><span id="fin-fc-r-price">—</span></div>
+                  <div class="fin-result-row fin-result-row--sub"><span>&#8722; Concession</span><span id="fin-fc-r-concession">—</span></div>
+                  <div class="fin-result-row fin-result-row--sub"><span>&#8722; Commission</span><span id="fin-fc-r-commission">—</span></div>
+                  <div class="fin-result-row fin-result-row--sub"><span>&#8722; Closing Costs</span><span id="fin-fc-r-closing">—</span></div>
+                  <div class="fin-result-row fin-result-row--sub"><span>&#8722; Mortgage Payoff</span><span id="fin-fc-r-mortgage">—</span></div>
+                  <div class="fin-result-row fin-result-row--total"><span>Net to Seller</span><span id="fin-fc-r-net">—</span></div>
+                  <p class="fin-disclaimer">*Concessions may allow a higher accepted offer, partially offsetting the cost.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7. 80/10/10 Comparison -->
+            <div class="fin-tools__panel" id="fin-panel-comp-80-10-10" hidden>
+              <button class="fin-tools__back" data-fin-back>&#8592; Back to Tools</button>
+              <h3 class="fin-tools__panel-title">80/10/10 Comparison</h3>
+              <p class="fin-tools__panel-desc">Piggyback loan (no PMI) vs. one loan with PMI — which costs less per month?</p>
+              <div class="fin-calc">
+                <div class="fin-calc__fields">
+                  <label for="fin-80-price">Home Price</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-80-price" value="400000" min="0"></div>
+                  <label for="fin-80-rate1">1st Mortgage Rate (80%, %)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-80-rate1" value="6.5" min="0" max="30" step="0.01"></div>
+                  <label for="fin-80-rate2">2nd Mortgage Rate (10%, %)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-80-rate2" value="8.0" min="0" max="30" step="0.01"></div>
+                  <label for="fin-80-term">Loan Term (years)</label>
+                  <div class="fin-input-wrap"><span>yr</span><input type="number" id="fin-80-term" value="30" min="1" max="50"></div>
+                  <label for="fin-80-pmi">Monthly PMI (single-loan option)</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-80-pmi" value="150" min="0"></div>
+                </div>
+                <div class="fin-calc__results">
+                  <div class="fin-result-row fin-result-row--label"><span>80/10/10 Option</span><span></span></div>
+                  <div class="fin-result-row fin-result-row--sub"><span>1st Mortgage (P&amp;I)</span><span id="fin-80-r-pay1">—</span></div>
+                  <div class="fin-result-row fin-result-row--sub"><span>2nd Mortgage (P&amp;I)</span><span id="fin-80-r-pay2">—</span></div>
+                  <div class="fin-result-row fin-result-row--total"><span>Total Monthly</span><span id="fin-80-r-total80">—</span></div>
+                  <div class="fin-result-row fin-result-row--label" style="margin-top:.75rem"><span>90% Loan + PMI</span><span></span></div>
+                  <div class="fin-result-row fin-result-row--sub"><span>Single Loan (P&amp;I)</span><span id="fin-80-r-pay90">—</span></div>
+                  <div class="fin-result-row fin-result-row--sub"><span>PMI</span><span id="fin-80-r-pmi">—</span></div>
+                  <div class="fin-result-row fin-result-row--total"><span>Total Monthly</span><span id="fin-80-r-total90">—</span></div>
+                  <div class="fin-result-row" style="margin-top:.5rem"><span>Monthly Difference</span><span id="fin-80-r-diff">—</span></div>
+                  <p class="fin-disclaimer">*PMI drops off the 90% loan once equity reaches 20%. The 2nd mortgage does not.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8. Income Estimator -->
+            <div class="fin-tools__panel" id="fin-panel-income" hidden>
+              <button class="fin-tools__back" data-fin-back>&#8592; Back to Tools</button>
+              <h3 class="fin-tools__panel-title">Income Estimator</h3>
+              <p class="fin-tools__panel-desc">Find the gross income needed to qualify for a given loan amount.</p>
+              <div class="fin-calc">
+                <div class="fin-calc__fields">
+                  <label for="fin-ie-price">Home Price</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-ie-price" value="400000" min="0"></div>
+                  <label for="fin-ie-down">Down Payment (%)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-ie-down" value="10" min="0" max="100" step="0.1"></div>
+                  <label for="fin-ie-rate">Interest Rate (%)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-ie-rate" value="6.5" min="0" max="30" step="0.01"></div>
+                  <label for="fin-ie-term">Loan Term (years)</label>
+                  <div class="fin-input-wrap"><span>yr</span><input type="number" id="fin-ie-term" value="30" min="1" max="50"></div>
+                  <label for="fin-ie-debts">Other Monthly Debts</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-ie-debts" value="300" min="0"></div>
+                  <label for="fin-ie-dti">Max Debt-to-Income (%)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-ie-dti" value="43" min="1" max="100" step="1"></div>
+                </div>
+                <div class="fin-calc__results">
+                  <div class="fin-result-row"><span>Loan Amount</span><span id="fin-ie-r-loan">—</span></div>
+                  <div class="fin-result-row"><span>Monthly P&amp;I</span><span id="fin-ie-r-pi">—</span></div>
+                  <div class="fin-result-row"><span>Other Debts</span><span id="fin-ie-r-debts">—</span></div>
+                  <div class="fin-result-row"><span>Total Monthly Debt</span><span id="fin-ie-r-total-debt">—</span></div>
+                  <div class="fin-result-row fin-result-row--total"><span>Required Monthly Income</span><span id="fin-ie-r-monthly">—</span></div>
+                  <div class="fin-result-row fin-result-row--total"><span>Required Annual Income</span><span id="fin-ie-r-annual">—</span></div>
+                  <p class="fin-disclaimer">*Based on DTI ratio only. Lenders also consider credit score, assets, and employment.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 9. Assumption Comparison -->
+            <div class="fin-tools__panel" id="fin-panel-assumption" hidden>
+              <button class="fin-tools__back" data-fin-back>&#8592; Back to Tools</button>
+              <h3 class="fin-tools__panel-title">Assumption Comparison</h3>
+              <p class="fin-tools__panel-desc">Compare assuming the seller's existing loan vs. taking out new financing.</p>
+              <div class="fin-calc">
+                <div class="fin-calc__fields">
+                  <label for="fin-as-balance">Assumable Loan Balance</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-as-balance" value="220000" min="0"></div>
+                  <label for="fin-as-assume-rate">Assumable Rate (%)</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-as-assume-rate" value="3.25" min="0" max="30" step="0.01"></div>
+                  <label for="fin-as-assume-term">Remaining Term (years)</label>
+                  <div class="fin-input-wrap"><span>yr</span><input type="number" id="fin-as-assume-term" value="25" min="1" max="50"></div>
+                  <label for="fin-as-price">Purchase Price</label>
+                  <div class="fin-input-wrap"><span>$</span><input type="number" id="fin-as-price" value="400000" min="0"></div>
+                  <label for="fin-as-new-rate">New Loan Rate (%) — 2nd or full refi</label>
+                  <div class="fin-input-wrap"><span>%</span><input type="number" id="fin-as-new-rate" value="6.5" min="0" max="30" step="0.01"></div>
+                  <label for="fin-as-new-term">New Loan Term (years)</label>
+                  <div class="fin-input-wrap"><span>yr</span><input type="number" id="fin-as-new-term" value="30" min="1" max="50"></div>
+                </div>
+                <div class="fin-calc__results">
+                  <div class="fin-result-row fin-result-row--label"><span>Assume Existing Loan</span><span></span></div>
+                  <div class="fin-result-row fin-result-row--sub"><span>Assumed Payment (P&amp;I)</span><span id="fin-as-r-assume-pay">—</span></div>
+                  <div class="fin-result-row fin-result-row--sub"><span>2nd Loan (balance gap)</span><span id="fin-as-r-second-pay">—</span></div>
+                  <div class="fin-result-row fin-result-row--total"><span>Total Monthly</span><span id="fin-as-r-assume-total">—</span></div>
+                  <div class="fin-result-row fin-result-row--label" style="margin-top:.75rem"><span>New Financing</span><span></span></div>
+                  <div class="fin-result-row fin-result-row--total"><span>New Loan Payment</span><span id="fin-as-r-new-pay">—</span></div>
+                  <div class="fin-result-row" style="margin-top:.5rem"><span>Monthly Savings (Assumption)</span><span id="fin-as-r-savings">—</span></div>
+                  <p class="fin-disclaimer">*Gap between purchase price and assumable balance financed at the new rate. Verify assumability with lender.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
@@ -182,7 +697,6 @@
           <p>Ready to sell with confidence? Send a message or use the full contact page.</p>
           <div class="btn-group">
             <a href="contact.html" class="btn" data-contact-modal-open>Send an email</a>
-            <a href="buy.html" class="btn-outline">Buying</a>
           </div>
         </div>
         <div></div>
@@ -196,8 +710,8 @@
         <div class="logo">Michael Harris</div>
         <div class="logo-tagline">Via Group, Realtors</div>
         <div class="footer-logos">
-          <img src="images/Vialogo1.jfif" alt="Via Group, Realtors" class="footer-logo" loading="lazy">
-          <img src="images/NARlogo2.jpg" alt="National Association of Realtors" class="footer-logo" loading="lazy">
+          <span class="footer-logo-wrap"><img src="images/logo-white.png" alt="Via Group, Realtors" loading="lazy"></span>
+          <span class="footer-logo-wrap"><img src="images/nar_membershipmark_black.png" alt="National Association of Realtors" class="nar-logo" loading="lazy"></span>
         </div>
       </div>
       <nav class="footer-mid" aria-label="Footer">
@@ -210,10 +724,10 @@
           <li><a href="blog.html">Blog</a></li>
         </ul>
         <div class="footer-social" aria-label="Social profiles">
-          <a href="https://www.facebook.com/MichaelHarrisHomes" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-          <a href="https://www.realtor.com/realestateagents/56b3495d89a68901006cc687" target="_blank" rel="noopener" aria-label="Realtor.com Profile">R</a>
-          <a href="https://www.zillow.com/profile/michael%20harris3" target="_blank" rel="noopener" aria-label="Zillow Profile">Z</a>
-          <a href="https://www.homes.com/real-estate-agents/michael-harris/2wdrwqc/" target="_blank" rel="noopener" aria-label="Homes.com Profile">H</a>
+          <a href="https://www.facebook.com/MichaelHarrisHomes" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://www.realtor.com/realestateagents/56b3495d89a68901006cc687" rel="noopener" aria-label="Realtor.com Profile">R</a>
+          <a href="https://www.zillow.com/profile/michael%20harris3" rel="noopener" aria-label="Zillow Profile">Z</a>
+          <a href="https://www.homes.com/real-estate-agents/michael-harris/2wdrwqc/" rel="noopener" aria-label="Homes.com Profile">H</a>
         </div>
       </nav>
       <div class="footer-newsletter" aria-labelledby="footer-newsletter-heading">
