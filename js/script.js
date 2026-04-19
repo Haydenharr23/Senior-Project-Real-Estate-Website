@@ -588,36 +588,16 @@
     });
   }
 
-  /** Des Moines area cards — in-section detail + back (home & about) */
+  /** Des Moines area cards — in-section detail + back (About page) */
   var DM_AREA_DETAIL = {
-    'des-moines': {
-      title: 'Des Moines',
+    'altoona': {
+      title: 'Altoona',
       body:
-        '<p>Iowa’s capital mixes downtown energy with residential pockets that feel worlds apart—historic districts, river trails, and mature neighborhoods are often only minutes from major employers and medical centers.</p>' +
+        '<p>Altoona pairs a small-city feel with big metro convenience—known for family-friendly neighborhoods, recreation, and strong east-side access toward Des Moines.</p>' +
         '<ul class="dm-areas-detail__list">' +
-        '<li>Choices from urban condos to spacious single-family streets</li>' +
-        '<li>Strong arts, dining, and events without giving up Midwest ease</li>' +
-        '<li>Quick freeway access to the rest of the metro</li>' +
-        '</ul>'
-    },
-    'west-des-moines': {
-      title: 'West Des Moines',
-      body:
-        '<p>West Des Moines is known for polished retail corridors, newer office and medical development, and neighborhoods that balance commute convenience with suburban space.</p>' +
-        '<ul class="dm-areas-detail__list">' +
-        '<li>Popular with buyers who want newer builds and amenity-rich pockets</li>' +
-        '<li>Strong shopping, dining, and services clustered along major corridors</li>' +
-        '<li>Still a straightforward drive to downtown DSM</li>' +
-        '</ul>'
-    },
-    'waukee': {
-      title: 'Waukee',
-      body:
-        '<p>Waukee has been one of the fastest-growing communities in the metro, drawing families who want newer schools, trails, and a small-city feel with room to spread out.</p>' +
-        '<ul class="dm-areas-detail__list">' +
-        '<li>Abundant new construction and planned neighborhoods</li>' +
-        '<li>Family-oriented parks and youth sports culture</li>' +
-        '<li>Growing retail and services as the population expands</li>' +
+        '<li>Mix of established streets and newer development</li>' +
+        '<li>Retail and entertainment draws for the whole region</li>' +
+        '<li>Straightforward commute options toward downtown DSM</li>' +
         '</ul>'
     },
     'ankeny': {
@@ -630,14 +610,24 @@
         '<li>Popular with commuters and relocating professionals</li>' +
         '</ul>'
     },
-    'urbandale': {
-      title: 'Urbandale',
+    'clive': {
+      title: 'Clive',
       body:
-        '<p>Urbandale sits near the geographic heart of the metro—ideal if you want shorter drives in almost every direction while still enjoying established trees, parks, and stable neighborhoods.</p>' +
+        '<p>Clive is prized for mature trees, the Greenbelt trail system, and a central location between West Des Moines and Urbandale—often a fit for buyers who want balance and established curb appeal.</p>' +
         '<ul class="dm-areas-detail__list">' +
-        '<li>Mix of classic ranch homes and newer infill</li>' +
-        '<li>Strong parks system and trail connections</li>' +
-        '<li>Central location for work, school, and weekend trips</li>' +
+        '<li>Strong trail and park access woven through the community</li>' +
+        '<li>Blend of classic homes and thoughtful infill</li>' +
+        '<li>Quick hops to major job and retail corridors</li>' +
+        '</ul>'
+    },
+    'des-moines': {
+      title: 'Des Moines',
+      body:
+        '<p>Iowa’s capital mixes downtown energy with residential pockets that feel worlds apart—historic districts, river trails, and mature neighborhoods are often only minutes from major employers and medical centers.</p>' +
+        '<ul class="dm-areas-detail__list">' +
+        '<li>Choices from urban condos to spacious single-family streets</li>' +
+        '<li>Strong arts, dining, and events without giving up Midwest ease</li>' +
+        '<li>Quick freeway access to the rest of the metro</li>' +
         '</ul>'
     },
     'johnston': {
@@ -649,20 +639,130 @@
         '<li>Green space, trails, and golf nearby</li>' +
         '<li>Convenient northwest positioning for many commutes</li>' +
         '</ul>'
+    },
+    'norwalk': {
+      title: 'Norwalk',
+      body:
+        '<p>Norwalk offers a Warren County lifestyle with room to breathe—popular with buyers who want newer construction, a bit more space, and a manageable drive into the metro.</p>' +
+        '<ul class="dm-areas-detail__list">' +
+        '<li>Growing roster of subdivisions and amenities</li>' +
+        '<li>Small-city services with access to larger retail nearby</li>' +
+        '<li>Commute-friendly positioning for south-metro employers</li>' +
+        '</ul>'
+    },
+    'urbandale': {
+      title: 'Urbandale',
+      body:
+        '<p>Urbandale sits near the geographic heart of the metro—ideal if you want shorter drives in almost every direction while still enjoying established trees, parks, and stable neighborhoods.</p>' +
+        '<ul class="dm-areas-detail__list">' +
+        '<li>Mix of classic ranch homes and newer infill</li>' +
+        '<li>Strong parks system and trail connections</li>' +
+        '<li>Central location for work, school, and weekend trips</li>' +
+        '</ul>'
+    },
+    'waukee': {
+      title: 'Waukee',
+      body:
+        '<p>Waukee has been one of the fastest-growing communities in the metro, drawing families who want newer schools, trails, and a small-city feel with room to spread out.</p>' +
+        '<ul class="dm-areas-detail__list">' +
+        '<li>Abundant new construction and planned neighborhoods</li>' +
+        '<li>Family-oriented parks and youth sports culture</li>' +
+        '<li>Growing retail and services as the population expands</li>' +
+        '</ul>'
+    },
+    'west-des-moines': {
+      title: 'West Des Moines',
+      body:
+        '<p>West Des Moines is known for polished retail corridors, newer office and medical development, and neighborhoods that balance commute convenience with suburban space.</p>' +
+        '<ul class="dm-areas-detail__list">' +
+        '<li>Popular with buyers who want newer builds and amenity-rich pockets</li>' +
+        '<li>Strong shopping, dining, and services clustered along major corridors</li>' +
+        '<li>Still a straightforward drive to downtown DSM</li>' +
+        '</ul>'
+    },
+    'windsor-heights': {
+      title: 'Windsor Heights',
+      body:
+        '<p>Windsor Heights is a compact, tree-heavy community tucked against Des Moines—ideal for buyers who want short commutes, walkable pockets, and a tight-knit neighborhood feel.</p>' +
+        '<ul class="dm-areas-detail__list">' +
+        '<li>Minutes from downtown and major medical employers</li>' +
+        '<li>Mature lots and mid-century charm alongside updates</li>' +
+        '<li>Easy access to regional trails and parks</li>' +
+        '</ul>'
+    },
+    'grimes': {
+      title: 'Grimes',
+      body:
+        '<p>Grimes has grown quickly along the northwest corridor, attracting buyers who want newer homes, strong schools, and a little more elbow room while staying inside realistic commuting distance.</p>' +
+        '<ul class="dm-areas-detail__list">' +
+        '<li>Plenty of new construction and master-planned pockets</li>' +
+        '<li>Family-oriented amenities and youth activities</li>' +
+        '<li>Northwest positioning toward Waukee and the western job belt</li>' +
+        '</ul>'
+    },
+    'indianola': {
+      title: 'Indianola',
+      body:
+        '<p>Indianola is the Warren County seat—home to Simpson College, a classic town square, and a more relaxed pace while still reachable for south-metro work and weekend trips back into DSM.</p>' +
+        '<ul class="dm-areas-detail__list">' +
+        '<li>Blend of historic homes, ranches, and newer subdivisions</li>' +
+        '<li>Local shops, festivals, and community traditions</li>' +
+        '<li>Popular with buyers who want value and small-city charm</li>' +
+        '</ul>'
+    },
+    'pleasant-hill': {
+      title: 'Pleasant Hill',
+      body:
+        '<p>Pleasant Hill sits southeast of Des Moines with a mix of established neighborhoods and newer growth—often chosen for schools, parks, and a straight shot toward downtown or the interstate.</p>' +
+        '<ul class="dm-areas-detail__list">' +
+        '<li>Convenient for many east- and south-metro employers</li>' +
+        '<li>Retail and services clustered along major corridors</li>' +
+        '<li>Balance of resale inventory and new builds</li>' +
+        '</ul>'
+    },
+    'bondurant': {
+      title: 'Bondurant',
+      body:
+        '<p>Bondurant blends small-town roots with metro growth—buyers get newer subdivisions and local schools while keeping northeast Des Moines and Ankeny within an easy drive.</p>' +
+        '<ul class="dm-areas-detail__list">' +
+        '<li>Community events and youth sports are part of daily life</li>' +
+        '<li>Growing housing variety from starter homes to larger plans</li>' +
+        '<li>Popular with commuters heading toward the northeast job belt</li>' +
+        '</ul>'
+    },
+    'adel': {
+      title: 'Adel',
+      body:
+        '<p>Adel is the Dallas County hub west of the metro—known for its courthouse square, local dining, and a steady stream of buyers who want a quieter pace with Waukee and West Des Moines still close.</p>' +
+        '<ul class="dm-areas-detail__list">' +
+        '<li>Mix of historic downtown living and suburban subdivisions</li>' +
+        '<li>County services and schools anchor the community</li>' +
+        '<li>Reasonable drive to the western retail and employment corridor</li>' +
+        '</ul>'
+    },
+    'newton': {
+      title: 'Newton',
+      body:
+        '<p>Newton (Jasper County) sits slightly beyond the day-to-day “inner” ring—appealing when you want affordability, space, and a distinct downtown while still connecting to Greater DSM for work or weekends.</p>' +
+        '<ul class="dm-areas-detail__list">' +
+        '<li>Historic architecture and a walkable core</li>' +
+        '<li>Arts and trail assets that punch above the city’s size</li>' +
+        '<li>Commute planning matters—Michael can help you weigh drive times</li>' +
+        '</ul>'
     }
   };
 
   function initDmAreaDetails() {
-    var section = document.querySelector('.dm-areas-section');
+    var section = document.querySelector('#des-moines-areas.dm-areas-section');
     if (!section) return;
 
     var wrap = section.querySelector('.dm-areas-grid-wrap');
-    var grid = section.querySelector('.dm-areas-grid');
+    var grids = section.querySelectorAll('.dm-areas-grid');
     var detail = section.querySelector('.dm-areas-detail');
     var backBtn = section.querySelector('.dm-areas-detail__back');
     var titleEl = section.querySelector('.dm-areas-detail__title');
     var bodyEl = section.querySelector('.dm-areas-detail__body');
-    if (!wrap || !grid || !detail || !backBtn || !titleEl || !bodyEl) return;
+    if (!wrap || !grids.length || !detail || !backBtn || !titleEl || !bodyEl) return;
 
     var cards = section.querySelectorAll('.dm-area-card[data-area]');
     if (!cards.length) return;
@@ -681,16 +781,32 @@
       });
     }
 
+    function stripCommunityQuery() {
+      if (!history.replaceState) return;
+      try {
+        var u = new URL(window.location.href);
+        if (!u.searchParams.has('community')) return;
+        u.searchParams.delete('community');
+        var qs = u.searchParams.toString();
+        history.replaceState(null, '', u.pathname + (qs ? '?' + qs : '') + (u.hash || ''));
+      } catch (err) {
+        /* ignore */
+      }
+    }
+
     function closeDetail() {
       wrap.classList.remove('dm-areas-grid-wrap--detail-open');
       detail.setAttribute('hidden', '');
       detail.setAttribute('aria-hidden', 'true');
-      grid.removeAttribute('aria-hidden');
+      grids.forEach(function (g) {
+        g.removeAttribute('aria-hidden');
+      });
       titleEl.textContent = '';
       bodyEl.innerHTML = '';
       cards.forEach(function (btn) {
         btn.setAttribute('aria-expanded', 'false');
       });
+      stripCommunityQuery();
       if (lastCard && typeof lastCard.focus === 'function') {
         lastCard.focus();
       }
@@ -706,7 +822,9 @@
       wrap.classList.add('dm-areas-grid-wrap--detail-open');
       detail.removeAttribute('hidden');
       detail.setAttribute('aria-hidden', 'false');
-      grid.setAttribute('aria-hidden', 'true');
+      grids.forEach(function (g) {
+        g.setAttribute('aria-hidden', 'true');
+      });
       setExpanded(key);
       backBtn.focus();
     }
@@ -735,6 +853,24 @@
       },
       true
     );
+
+    function openDetailFromQuery() {
+      var params;
+      try {
+        params = new URLSearchParams(window.location.search);
+      } catch (err) {
+        return;
+      }
+      var key = params.get('community');
+      if (!key || !DM_AREA_DETAIL[key]) return;
+      var trigger = section.querySelector('.dm-area-card[data-area="' + key + '"]');
+      if (!trigger) return;
+      window.setTimeout(function () {
+        openDetail(key, trigger);
+      }, 0);
+    }
+
+    openDetailFromQuery();
   }
 
   function initSellerTabs() {

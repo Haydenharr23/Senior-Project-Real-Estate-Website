@@ -374,6 +374,125 @@ main > section.dm-areas-section {
   border-top: 1px solid rgba(48, 75, 69, 0.1);
 }
 
+main > section.dm-areas-preview-section {
+  background: linear-gradient(175deg, #faf8f5 0%, #eef4f1 55%, #f2ebe3 100%);
+  box-shadow: 0 0 0 100vmax #f2ebe3;
+  clip-path: inset(0 -100vmax);
+  border-top: 1px solid rgba(48, 75, 69, 0.09);
+}
+
+.dm-areas-preview-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.dm-areas-preview-head {
+  text-align: center;
+  max-width: 38rem;
+  margin: 0 auto 1.5rem;
+}
+
+.dm-areas-preview-head .section-label {
+  text-align: center;
+}
+
+.dm-areas-preview-head .dm-areas-heading {
+  margin-bottom: 0.65rem;
+}
+
+.dm-areas-preview-lead {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+.dm-areas-preview-strip {
+  list-style: none;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.7rem;
+}
+
+.dm-areas-preview-strip > li {
+  min-width: 0;
+}
+
+a.dm-areas-preview-item--link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--radius-md);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+a.dm-areas-preview-item--link:hover {
+  transform: translateY(-3px);
+}
+
+a.dm-areas-preview-item--link:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+}
+
+a.dm-areas-preview-item--link:hover .dm-areas-preview-item__media,
+a.dm-areas-preview-item--link:focus-visible .dm-areas-preview-item__media {
+  border-color: rgba(48, 75, 69, 0.35);
+  box-shadow: 0 8px 28px rgba(26, 26, 26, 0.12);
+}
+
+.dm-areas-preview-item__media {
+  display: block;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid #e0dbd4;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 0.4rem;
+}
+
+.dm-areas-preview-item__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dm-areas-preview-item__name {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--teal);
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+
+.dm-areas-preview-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .dm-areas-preview-strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .dm-areas-preview-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.dm-areas-preview-item--link:hover {
+    transform: none;
+  }
+}
+
 .dm-areas-inner {
   max-width: 1160px;
   margin: 0 auto;
@@ -419,6 +538,32 @@ main > section.dm-areas-section {
   align-items: center;
 }
 
+.dm-areas-subheading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--teal);
+  margin: 0 0 0.75rem;
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.dm-areas-grid + .dm-areas-subheading {
+  margin-top: 2rem;
+}
+
+.dm-areas-subheading-note {
+  font-size: 0.875rem;
+  color: var(--gray);
+  line-height: 1.55;
+  margin: -0.25rem 0 0.85rem;
+  position: relative;
+  z-index: 1;
+  max-width: 38rem;
+}
+
 .dm-areas-grid-wrap {
   position: relative;
   border-radius: var(--radius-lg);
@@ -446,6 +591,24 @@ main > section.dm-areas-section {
   gap: 0.85rem;
   position: relative;
   z-index: 1;
+}
+
+.dm-areas-grid--core {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.dm-areas-grid--outer {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1100px) {
+  .dm-areas-grid--core {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dm-areas-grid--outer {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .dm-area-card {
@@ -629,16 +792,32 @@ main > section.dm-areas-section {
   .dm-areas-cta {
     justify-content: center;
   }
+
+  .dm-areas-subheading,
+  .dm-areas-subheading-note {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 640px) {
-  .dm-areas-grid {
+  .dm-areas-grid,
+  .dm-areas-grid--core,
+  .dm-areas-grid--outer {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dm-areas-grid--core .dm-area-card__label,
+  .dm-areas-grid--outer .dm-area-card__label {
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 400px) {
-  .dm-areas-grid {
+  .dm-areas-grid,
+  .dm-areas-grid--core,
+  .dm-areas-grid--outer {
     grid-template-columns: 1fr;
   }
 }

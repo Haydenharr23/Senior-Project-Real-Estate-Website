@@ -61,79 +61,54 @@
       </div>
     </section>
 
-    <section class="dm-areas-section" id="des-moines-areas" aria-labelledby="dm-areas-heading">
-      <div class="dm-areas-inner">
-        <div class="dm-areas-split">
-          <div class="dm-areas-copy">
-            <p class="section-label">Local expertise</p>
-            <h2 id="dm-areas-heading" class="dm-areas-heading">Explore the Des Moines Area</h2>
-            <p class="dm-areas-lead">The metro blends established neighborhoods, new construction, strong employers, and room to grow—so buyers can prioritize schools, commute, nightlife, or quiet blocks and still stay within reach of downtown.</p>
-            <p class="dm-areas-lead dm-areas-lead--secondary">Choose a community for a short overview, then use <strong>All areas</strong> to return to the map—or open buyer resources when you are ready to talk financing and the purchase path.</p>
-            <div class="dm-areas-cta">
-              <a href="buy.html#buyers-resources" class="btn-outline">Buyer resources</a>
-              <a href="contact.html" class="btn" data-contact-modal-open>Discuss locations</a>
-            </div>
-          </div>
-          <div class="dm-areas-grid-wrap">
-            <ul class="dm-areas-grid" id="dm-areas-grid" aria-label="Greater Des Moines communities">
-              <li>
-                <button type="button" class="dm-area-card" data-area="des-moines" aria-expanded="false" aria-controls="dm-area-detail-panel">
-                  <span class="visually-hidden">Show overview for Des Moines</span>
-                  <img class="dm-area-card__img" src="images/pexels-house-1836070_1920.jpg" alt="" width="640" height="480" loading="lazy">
-                  <span class="dm-area-card__overlay" aria-hidden="true"></span>
-                  <span class="dm-area-card__label">Des Moines</span>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dm-area-card" data-area="west-des-moines" aria-expanded="false" aria-controls="dm-area-detail-panel">
-                  <span class="visually-hidden">Show overview for West Des Moines</span>
-                  <img class="dm-area-card__img" src="images/pexels-house-1867187_1920.jpg" alt="" width="640" height="480" loading="lazy">
-                  <span class="dm-area-card__overlay" aria-hidden="true"></span>
-                  <span class="dm-area-card__label">West Des Moines</span>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dm-area-card" data-area="waukee" aria-expanded="false" aria-controls="dm-area-detail-panel">
-                  <span class="visually-hidden">Show overview for Waukee</span>
-                  <img class="dm-area-card__img" src="images/paulbr75-new-home-2416180_1920.jpg" alt="" width="640" height="480" loading="lazy">
-                  <span class="dm-area-card__overlay" aria-hidden="true"></span>
-                  <span class="dm-area-card__label">Waukee</span>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dm-area-card" data-area="ankeny" aria-expanded="false" aria-controls="dm-area-detail-panel">
-                  <span class="visually-hidden">Show overview for Ankeny</span>
-                  <img class="dm-area-card__img" src="images/paulbr75-new-home-2419999_1920.jpg" alt="" width="640" height="480" loading="lazy">
-                  <span class="dm-area-card__overlay" aria-hidden="true"></span>
-                  <span class="dm-area-card__label">Ankeny</span>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dm-area-card" data-area="urbandale" aria-expanded="false" aria-controls="dm-area-detail-panel">
-                  <span class="visually-hidden">Show overview for Urbandale</span>
-                  <img class="dm-area-card__img" src="images/paulbr75-luxury-home-2409518_1920.jpg" alt="" width="640" height="480" loading="lazy">
-                  <span class="dm-area-card__overlay" aria-hidden="true"></span>
-                  <span class="dm-area-card__label">Urbandale</span>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dm-area-card" data-area="johnston" aria-expanded="false" aria-controls="dm-area-detail-panel">
-                  <span class="visually-hidden">Show overview for Johnston</span>
-                  <img class="dm-area-card__img" src="images/home_hero.jpg" alt="" width="640" height="480" loading="lazy">
-                  <span class="dm-area-card__overlay" aria-hidden="true"></span>
-                  <span class="dm-area-card__label">Johnston</span>
-                </button>
-              </li>
-            </ul>
-            <div class="dm-areas-detail" id="dm-area-detail-panel" role="region" aria-labelledby="dm-area-detail-title" hidden aria-hidden="true">
-              <button type="button" class="dm-areas-detail__back"><span class="dm-areas-detail__back-icon" aria-hidden="true">←</span> All areas</button>
-              <h3 id="dm-area-detail-title" class="dm-areas-detail__title"></h3>
-              <div class="dm-areas-detail__body"></div>
-              <div class="dm-areas-detail__actions">
-                <a href="contact.html" class="btn" data-contact-modal-open>Discuss this area</a>
-              </div>
-            </div>
-          </div>
+    <section class="dm-areas-preview-section" aria-labelledby="dm-areas-preview-heading">
+      <div class="dm-areas-preview-inner">
+        <div class="dm-areas-preview-head">
+          <p class="section-label">Local expertise</p>
+          <h2 id="dm-areas-preview-heading" class="dm-areas-heading">Greater Des Moines Area</h2>
+          <p class="dm-areas-lead dm-areas-preview-lead">From downtown to the growing suburbs, buyers have more choices than ever. Tap any community below to open the full guide on that area—or use the button to browse the complete list.</p>
+        </div>
+        <ul class="dm-areas-preview-strip" aria-label="Communities in the Des Moines metro">
+          <li>
+            <a class="dm-areas-preview-item dm-areas-preview-item--link" href="about.html?community=des-moines#des-moines-areas" aria-label="Open community guide: Des Moines">
+              <span class="dm-areas-preview-item__media"><img src="images/about_hero.jpg" alt="" width="320" height="240" loading="lazy"></span>
+              <span class="dm-areas-preview-item__name" aria-hidden="true">Des Moines</span>
+            </a>
+          </li>
+          <li>
+            <a class="dm-areas-preview-item dm-areas-preview-item--link" href="about.html?community=west-des-moines#des-moines-areas" aria-label="Open community guide: West Des Moines">
+              <span class="dm-areas-preview-item__media"><img src="images/paulbr75-luxury-home-2409518_1920.jpg" alt="" width="320" height="240" loading="lazy"></span>
+              <span class="dm-areas-preview-item__name" aria-hidden="true">West Des Moines</span>
+            </a>
+          </li>
+          <li>
+            <a class="dm-areas-preview-item dm-areas-preview-item--link" href="about.html?community=waukee#des-moines-areas" aria-label="Open community guide: Waukee">
+              <span class="dm-areas-preview-item__media"><img src="images/paulbr75-new-home-2416180_1920.jpg" alt="" width="320" height="240" loading="lazy"></span>
+              <span class="dm-areas-preview-item__name" aria-hidden="true">Waukee</span>
+            </a>
+          </li>
+          <li>
+            <a class="dm-areas-preview-item dm-areas-preview-item--link" href="about.html?community=ankeny#des-moines-areas" aria-label="Open community guide: Ankeny">
+              <span class="dm-areas-preview-item__media"><img src="images/paulbr75-new-home-2419999_1920.jpg" alt="" width="320" height="240" loading="lazy"></span>
+              <span class="dm-areas-preview-item__name" aria-hidden="true">Ankeny</span>
+            </a>
+          </li>
+          <li>
+            <a class="dm-areas-preview-item dm-areas-preview-item--link" href="about.html?community=urbandale#des-moines-areas" aria-label="Open community guide: Urbandale">
+              <span class="dm-areas-preview-item__media"><img src="images/pexels-house-1867187_1920.jpg" alt="" width="320" height="240" loading="lazy"></span>
+              <span class="dm-areas-preview-item__name" aria-hidden="true">Urbandale</span>
+            </a>
+          </li>
+          <li>
+            <a class="dm-areas-preview-item dm-areas-preview-item--link" href="about.html?community=johnston#des-moines-areas" aria-label="Open community guide: Johnston">
+              <span class="dm-areas-preview-item__media"><img src="images/home_hero.jpg" alt="" width="320" height="240" loading="lazy"></span>
+              <span class="dm-areas-preview-item__name" aria-hidden="true">Johnston</span>
+            </a>
+          </li>
+        </ul>
+        <div class="dm-areas-preview-cta">
+          <a href="about.html#des-moines-areas" class="btn btn-arrow">Explore all communities</a>
+          <a href="buy.html#buyers-resources" class="btn-outline">Buyer resources</a>
         </div>
       </div>
     </section>
