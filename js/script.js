@@ -740,14 +740,14 @@
         '<li>Reasonable drive to the western retail and employment corridor</li>' +
         '</ul>'
     },
-    'newton': {
-      title: 'Newton',
+    'outer-des-moines': {
+      title: 'Outer Metro',
       body:
-        '<p>Newton (Jasper County) sits slightly beyond the day-to-day “inner” ring—appealing when you want affordability, space, and a distinct downtown while still connecting to Greater DSM for work or weekends.</p>' +
+        '<p>Beyond the core suburbs lies a wider ring of cities and towns—each with its own character, value proposition, and commute trade-off. Communities like Grimes, Indianola, Pleasant Hill, Bondurant, Adel, and Newton offer more space and affordability while staying connected to Greater Des Moines for work, shopping, and weekend life.</p>' +
         '<ul class="dm-areas-detail__list">' +
-        '<li>Historic architecture and a walkable core</li>' +
-        '<li>Arts and trail assets that punch above the city’s size</li>' +
-        '<li>Commute planning matters—Michael can help you weigh drive times</li>' +
+        '<li>More elbow room and value compared to the inner suburbs</li>' +
+        '<li>Mix of small-town charm, new construction, and established neighborhoods</li>' +
+        '<li>Michael can help you weigh commute times, schools, and budget for the right fit</li>' +
         '</ul>'
     }
   };
