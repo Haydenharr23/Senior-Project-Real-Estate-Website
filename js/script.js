@@ -580,14 +580,6 @@
     });
   }
 
-  function clearPlaceholders(root) {
-    root.querySelectorAll('*').forEach(function (el) {
-      if (el.children.length === 0 && el.textContent.trim() === '{Description}') {
-        el.textContent = '';
-      }
-    });
-  }
-
   /** Des Moines area cards — in-section detail + back (About page) */
   var DM_AREA_DETAIL = {
     'altoona': {
@@ -942,18 +934,6 @@
       });
     }, { threshold: 0.25 });
     observer.observe(barsContainer);
-  }
-
-  function initIntouchCleanup() {
-    var blogSection = document.querySelector('.blog-feed-section');
-    if (!blogSection) return;
-    var container = blogSection.querySelector('#intouch-container');
-    if (!container) return;
-    clearPlaceholders(container);
-    var observer = new MutationObserver(function () {
-      clearPlaceholders(container);
-    });
-    observer.observe(container, { childList: true, subtree: true });
   }
 
   function remainingBalance(principal, annualRatePct, totalYears, paymentsMade) {
@@ -1638,7 +1618,6 @@
     initSellerTabs();
     initDmAreaDetails();
     initBuyerInteractive();
-    initIntouchCleanup();
     initFinancialTools();
   }
 

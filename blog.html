@@ -56,14 +56,71 @@
       </div>
     </section>
 
-    <!-- Blog Posts via InTouch API -->
+    <!-- Local blog articles -->
     <section class="blog-feed-section">
       <div class="blog-feed-box">
         <div class="blog-feed-box__header">
           <h2 class="section-title">Latest Articles</h2>
           <p>Insights on the Des Moines market, buying and selling tips, and local resources.</p>
         </div>
-        <div id="intouch-container" class="p-3"></div>
+        <ul class="blog-local-grid" role="list">
+          <li class="blog-local-card">
+            <a class="blog-local-card__link" href="blog/first-time-home-buyer-des-moines.html">
+              <div class="blog-local-card__media"><img src="images/home_hero.jpg" alt="" width="400" height="240" loading="lazy"></div>
+              <p class="blog-local-card__title">First-Time Home Buyer Guide: Des Moines Area</p>
+              <p class="blog-local-card__meta">Buying · February 12, 2026</p>
+              <p class="blog-local-card__excerpt">Learn the key steps to buying your first home in the Des Moines metro, from pre-approval through closing day.</p>
+            </a>
+          </li>
+          <li class="blog-local-card">
+            <a class="blog-local-card__link" href="blog/pre-listing-home-prep.html">
+              <div class="blog-local-card__media"><img src="images/sell_hero.jpg" alt="" width="400" height="240" loading="lazy"></div>
+              <p class="blog-local-card__title">Pre-Listing Home Prep: What to Fix First</p>
+              <p class="blog-local-card__meta">Selling · January 28, 2026</p>
+              <p class="blog-local-card__excerpt">Smart pre-listing improvements that help your home show better and sell with fewer buyer objections.</p>
+            </a>
+          </li>
+          <li class="blog-local-card">
+            <a class="blog-local-card__link" href="blog/west-des-moines-market-snapshot.html">
+              <div class="blog-local-card__media"><img src="images/about_hero.jpg" alt="" width="400" height="240" loading="lazy"></div>
+              <p class="blog-local-card__title">West Des Moines Market Snapshot</p>
+              <p class="blog-local-card__meta">Market · January 15, 2026</p>
+              <p class="blog-local-card__excerpt">Local market insights for buyers and sellers in West Des Moines, including strategy tips for current conditions.</p>
+            </a>
+          </li>
+          <li class="blog-local-card">
+            <a class="blog-local-card__link" href="blog/mortgage-preapproval-why-it-matters.html">
+              <div class="blog-local-card__media"><img src="images/home_hero.jpg" alt="" width="400" height="240" loading="lazy"></div>
+              <p class="blog-local-card__title">Why Mortgage Pre-Approval Matters</p>
+              <p class="blog-local-card__meta">Buying · January 8, 2026</p>
+              <p class="blog-local-card__excerpt">Pre-approval helps buyers define budget, strengthen offers, and move faster from accepted offer to closing.</p>
+            </a>
+          </li>
+          <li class="blog-local-card">
+            <a class="blog-local-card__link" href="blog/home-inspection-what-to-expect.html">
+              <div class="blog-local-card__media"><img src="images/about_hero.jpg" alt="" width="400" height="240" loading="lazy"></div>
+              <p class="blog-local-card__title">Home Inspection Day: What to Expect</p>
+              <p class="blog-local-card__meta">Buying · December 20, 2025</p>
+              <p class="blog-local-card__excerpt">A practical guide for buyers on inspection day, including common findings and next-step decisions.</p>
+            </a>
+          </li>
+          <li class="blog-local-card">
+            <a class="blog-local-card__link" href="blog/staging-tips-that-sell.html">
+              <div class="blog-local-card__media"><img src="images/sell_hero.jpg" alt="" width="400" height="240" loading="lazy"></div>
+              <p class="blog-local-card__title">Staging Tips That Help Homes Sell</p>
+              <p class="blog-local-card__meta">Selling · December 5, 2025</p>
+              <p class="blog-local-card__excerpt">Simple, high-impact staging ideas that help buyers focus on your home's best features.</p>
+            </a>
+          </li>
+          <li class="blog-local-card">
+            <a class="blog-local-card__link" href="blog/moving-to-des-moines-checklist.html">
+              <div class="blog-local-card__media"><img src="images/about_hero.jpg" alt="" width="400" height="240" loading="lazy"></div>
+              <p class="blog-local-card__title">Moving to Des Moines: A Short Checklist</p>
+              <p class="blog-local-card__meta">Local · November 18, 2025</p>
+              <p class="blog-local-card__excerpt">A simple relocation checklist to help new residents settle into the Des Moines metro with confidence.</p>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -102,12 +159,12 @@
           <li><a href="contact.html">Contact</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
-        <div class="footer-social" aria-label="Social profiles">
-          <a href="https://www.facebook.com/MichaelHarrisHomes" rel="noopener" aria-label="Facebook">f</a>
-          <a href="https://www.realtor.com/realestateagents/56b3495d89a68901006cc687" rel="noopener" aria-label="Realtor.com Profile">R</a>
-          <a href="https://www.zillow.com/profile/michael%20harris3" rel="noopener" aria-label="Zillow Profile">Z</a>
-          <a href="https://www.homes.com/real-estate-agents/michael-harris/2wdrwqc/" rel="noopener" aria-label="Homes.com Profile">H</a>
-        </div>
+        <ul class="footer-social" role="list" aria-label="Social profiles">
+          <li><a href="https://www.facebook.com/MichaelHarrisHomes" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.zillow.com/profile/michael%20harris3" rel="noopener">Zillow</a></li>
+          <li><a href="https://www.realtor.com/realestateagents/56b3495d89a68901006cc687" rel="noopener">Realtor.com</a></li>
+          <li><a href="https://www.homes.com/real-estate-agents/michael-harris/2wdrwqc/" rel="noopener">Homes.com</a></li>
+        </ul>
       </nav>
       <div class="footer-newsletter" aria-labelledby="footer-newsletter-heading">
         <p id="footer-newsletter-heading" class="footer-newsletter__title">Newsletter</p>
@@ -128,7 +185,6 @@
     </div>
   </footer>
 
-  <script src="https://intouchsystems.com/marketmultiplier/api.js" data-api-key="6aff0999-0e4f-40fc-bedd-04a3ac66530b" data-api-type="posts"></script>
   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   <script src="js/script.js" defer></script>
 </body>
